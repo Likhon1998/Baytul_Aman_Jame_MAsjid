@@ -1911,3 +1911,16 @@ section {
         display: none;
     }
 }
+p a {
+  background: linear-gradient(90deg, #1E7145, #DAA520);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.3s;
+}
+
+p a:hover {
+  transform: scale(1.05);
+}
