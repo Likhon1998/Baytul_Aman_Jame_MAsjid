@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baytul Aman Jame Masjid - Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <i class="fas fa-mosque"></i>
+                <span data-lang="siteName">Baytul Aman Jame Masjid</span>
+            </div>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="active" data-lang="navHome">Home</a></li>
+                <li><a href="about.html" data-lang="navAbout">About</a></li>
+                <li><a href="committee.html" data-lang="navCommittee">Committee</a></li>
+                <li><a href="donation.html" data-lang="navDonation">Donation</a></li>
+                <li><a href="gallery.html" data-lang="navGallery">Gallery</a></li>
+                <li><a href="events.html" data-lang="navEvents">Events</a></li>
+                <li><a href="contact.html" data-lang="navContact">Contact</a></li>
+                <li>
+                    <button class="lang-toggle" id="langToggle">
+                        <i class="fas fa-language"></i>
+                        <span id="currentLang">EN</span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title" data-lang="heroTitle">Baytul Aman Jame Masjid</h1>
+            <p class="hero-subtitle" data-lang="heroSubtitle">Established in 2016 — A House of Worship and Community</p>
+            <div class="hero-buttons">
+                <a href="about.html" class="btn btn-primary" data-lang="btnLearnMore">Learn More</a>
+                <a href="donation.html" class="btn btn-secondary" data-lang="btnDonate">Donate Now</a>
+            </div>
+            <div class="scroll-indicator">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prayer Times Section -->
+    <section class="prayer-times">
+        <div class="container">
+            <h2 class="section-title" data-lang="prayerTimesTitle">Daily Prayer Times</h2>
+            <div class="current-time">
+                <i class="far fa-clock"></i>
+                <span id="currentTime"></span>
+            </div>
+            <div class="prayer-grid">
+                <div class="prayer-card">
+                    <i class="fas fa-sun"></i>
+                    <h3 data-lang="fajr">Fajr</h3>
+                    <p class="time">5:00 AM</p>
+                </div>
+                <div class="prayer-card">
+                    <i class="fas fa-cloud-sun"></i>
+                    <h3 data-lang="dhuhr">Dhuhr</h3>
+                    <p class="time">12:30 PM</p>
+                </div>
+                <div class="prayer-card">
+                    <i class="fas fa-sun"></i>
+                    <h3 data-lang="asr">Asr</h3>
+                    <p class="time">4:15 PM</p>
+                </div>
+                <div class="prayer-card">
+                    <i class="fas fa-cloud-sun"></i>
+                    <h3 data-lang="maghrib">Maghrib</h3>
+                    <p class="time">6:00 PM</p>
+                </div>
+                <div class="prayer-card">
+                    <i class="fas fa-moon"></i>
+                    <h3 data-lang="isha">Isha</h3>
+                    <p class="time">7:30 PM</p>
+                </div>
+                <div class="prayer-card jummah">
+                    <i class="fas fa-mosque"></i>
+                    <h3 data-lang="jummah">Jummah</h3>
+                    <p class="time">1:30 PM</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Preview Section -->
+    <section class="about-preview">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title" data-lang="aboutTitle">Welcome to Our Masjid</h2>
+                    <p data-lang="aboutPreview">Baytul Aman Jame Masjid has been serving our community since 2016. We are dedicated to providing a peaceful space for worship, learning, and community engagement. Our mission is to foster Islamic values, unity, and spiritual growth among Muslims and promote understanding with our neighbors.</p>
+                    <a href="about.html" class="btn btn-primary" data-lang="btnReadMore">Read More</a>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?w=600" alt="Mosque">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Stats -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <i class="fas fa-calendar-alt"></i>
+                    <h3 class="counter" data-target="9">0</h3>
+                    <p data-lang="yearsServing">Years Serving</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-users"></i>
+                    <h3 class="counter" data-target="500">0</h3>
+                    <p data-lang="communityMembers">Community Members</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-hand-holding-heart"></i>
+                    <h3 class="counter" data-target="150">0</h3>
+                    <p data-lang="donors">Donors</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-book-quran"></i>
+                    <h3 class="counter" data-target="200">0</h3>
+                    <p data-lang="students">Students</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta">
+        <div class="container">
+            <h2 data-lang="ctaTitle">Support Your Masjid</h2>
+            <p data-lang="ctaText">Your donations help us maintain the mosque and serve the community better</p>
+            <a href="donation.html" class="btn btn-light" data-lang="btnDonateNow">Donate Now</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3 data-lang="siteName">Baytul Aman Jame Masjid</h3>
+                    <p data-lang="footerAbout">A place of worship, learning, and community since 2016.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4 data-lang="quickLinks">Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html" data-lang="navAbout">About</a></li>
+                        <li><a href="committee.html" data-lang="navCommittee">Committee</a></li>
+                        <li><a href="events.html" data-lang="navEvents">Events</a></li>
+                        <li><a href="contact.html" data-lang="navContact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 data-lang="contactInfo">Contact Info</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> <span data-lang="address">Dhaka, Bangladesh</span></li>
+                        <li><i class="fas fa-phone"></i> +880-XXX-XXXXXX</li>
+                        <li><i class="fas fa-envelope"></i> info@baytulaman.org</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 data-lang="prayerTimesTitle">Prayer Times</h4>
+                    <ul>
+                        <li><span data-lang="fajr">Fajr</span>: 5:00 AM</li>
+                        <li><span data-lang="dhuhr">Dhuhr</span>: 12:30 PM</li>
+                        <li><span data-lang="maghrib">Maghrib</span>: 6:00 PM</li>
+                        <li><span data-lang="jummah">Jummah</span>: 1:30 PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 <span data-lang="siteName">Baytul Aman Jame Masjid</span>. <span data-lang="copyright">All rights reserved.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

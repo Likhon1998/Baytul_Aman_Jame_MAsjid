@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation - Baytul Aman Jame Masjid</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <i class="fas fa-mosque"></i>
+                <span data-lang="siteName">Baytul Aman Jame Masjid</span>
+            </div>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" data-lang="navHome">Home</a></li>
+                <li><a href="about.html" data-lang="navAbout">About</a></li>
+                <li><a href="committee.html" data-lang="navCommittee">Committee</a></li>
+                <li><a href="donation.html" class="active" data-lang="navDonation">Donation</a></li>
+                <li><a href="gallery.html" data-lang="navGallery">Gallery</a></li>
+                <li><a href="events.html" data-lang="navEvents">Events</a></li>
+                <li><a href="contact.html" data-lang="navContact">Contact</a></li>
+                <li>
+                    <button class="lang-toggle" id="langToggle">
+                        <i class="fas fa-language"></i>
+                        <span id="currentLang">EN</span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 data-lang="donationPageTitle">Support Our Masjid</h1>
+            <p data-lang="donationPageSubtitle">Your generosity helps us serve the community and maintain our masjid</p>
+        </div>
+    </section>
+
+    <!-- Donation Options -->
+    <section class="donation-options">
+        <div class="container">
+            <h2 class="section-title" data-lang="membershipTitle">Membership Options</h2>
+            <div class="donation-grid">
+                <div class="donation-card fade-in">
+                    <div class="donation-icon gold">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3 data-lang="motowalliTitle">Motowalli Sodossho</h3>
+                    <div class="donation-price">৳1,00,000+</div>
+                    <ul class="donation-benefits">
+                        <li><i class="fas fa-check"></i> <span data-lang="benefit1">Permanent recognition</span></li>
+                        <li><i class="fas fa-check"></i> <span data-lang="benefit2">Honored plaque</span></li>
+                        <li><i class="fas fa-check"></i> <span data-lang="benefit3">Special prayers</span></li>
+                        <li><i class="fas fa-check"></i> <span data-lang="benefit4">Community honor</span></li>
+                    </ul>
+                </div>
+                <div class="donation-card fade-in">
+                    <div class="donation-icon silver">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 data-lang="ajibonTitle">Ajibon Sodossho</h3>
+                    <div class="donation-price">৳30,000</div>
+                    <ul class="donation-benefits">
+                        <li><i class="fas fa-check"></i> <span data-lang="benefit5">Lifetime membership</span></li>
+                        <li><i class="fas fa-check"></i> <span data-lang="benefit6">Name recognition</span></li>
+                        <li><i class="fas fa-check"></i> <span data-lang="benefit7">Continuous support</span></li>
+                        <li><i class="fas fa-check"></i> <span data-lang="benefit8">Community blessings</span></li>
+                    </ul>
+                </div>
+                <div class="donation-card fade-in">
+                    <div class="donation-icon bronze">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                    <h3 data-lang="generalTitle">General Donation</h3>
+                    <div class="donation-price" data-lang="anyAmount">Any Amount</div>
+                    <ul class="donation-benefits">
+                        <li><i class="fas fa-check"></i> <span data-lang="benefit9">Support operations</span></li>
+                        <li><i class="fas fa-check"></i> <span data-lang="benefit10">Help programs</span></li>
+                        <li><i class="fas fa-check"></i> <span data-lang="benefit11">Maintain facility</span></li>
+                        <li><i class="fas fa-check"></i> <span data-lang="benefit12">Earn rewards</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Current Projects -->
+    <section class="projects">
+        <div class="container">
+            <h2 class="section-title" data-lang="projectsTitle">Current Projects</h2>
+            <div class="project-list">
+                <div class="project-item fade-in">
+                    <div class="project-info">
+                        <h3 data-lang="project1Title">Expansion of Prayer Hall</h3>
+                        <p data-lang="project1Desc">We are expanding our prayer hall to accommodate more worshippers during Jummah and Eid prayers.</p>
+                    </div>
+                    <div class="project-progress">
+                        <div class="progress-info">
+                            <span data-lang="raised">Raised</span>
+                            <span>৳8,50,000 / ৳12,00,000</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-progress="71"></div>
+                        </div>
+                        <div class="progress-percent">71%</div>
+                    </div>
+                </div>
+                <div class="project-item fade-in">
+                    <div class="project-info">
+                        <h3 data-lang="project2Title">Ablution Facility Upgrade</h3>
+                        <p data-lang="project2Desc">Modernizing ablution facilities with better plumbing and comfort for all ages.</p>
+                    </div>
+                    <div class="project-progress">
+                        <div class="progress-info">
+                            <span data-lang="raised">Raised</span>
+                            <span>৳3,20,000 / ৳5,00,000</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-progress="64"></div>
+                        </div>
+                        <div class="progress-percent">64%</div>
+                    </div>
+                </div>
+                <div class="project-item fade-in">
+                    <div class="project-info">
+                        <h3 data-lang="project3Title">Islamic Education Center</h3>
+                        <p data-lang="project3Desc">Building dedicated classrooms for Quran and Islamic studies programs.</p>
+                    </div>
+                    <div class="project-progress">
+                        <div class="progress-info">
+                            <span data-lang="raised">Raised</span>
+                            <span>৳2,10,000 / ৳8,00,000</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-progress="26"></div>
+                        </div>
+                        <div class="progress-percent">26%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Payment Methods -->
+    <section class="payment-methods">
+        <div class="container">
+            <h2 class="section-title" data-lang="howToDonateTitle">How to Donate</h2>
+            <div class="payment-grid">
+                <div class="payment-card fade-in">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3 data-lang="mobileBankingTitle">Mobile Banking</h3>
+                    <div class="payment-details">
+                        <p><strong>bKash:</strong> 01XXX-XXXXXX</p>
+                        <p><strong>Nagad:</strong> 01XXX-XXXXXX</p>
+                        <p><strong>Rocket:</strong> 01XXX-XXXXXX</p>
+                    </div>
+                </div>
+                <div class="payment-card fade-in">
+                    <i class="fas fa-university"></i>
+                    <h3 data-lang="bankTransferTitle">Bank Transfer</h3>
+                    <div class="payment-details">
+                        <p><strong data-lang="bankName">Bank Name:</strong> Example Bank</p>
+                        <p><strong data-lang="accountName">Account Name:</strong> Baytul Aman Jame Masjid</p>
+                        <p><strong data-lang="accountNumber">Account No:</strong> XXXX-XXXX-XXXX</p>
+                        <p><strong data-lang="branchName">Branch:</strong> Dhaka</p>
+                    </div>
+                </div>
+                <div class="payment-card fade-in">
+                    <i class="fas fa-hand-holding-usd"></i>
+                    <h3 data-lang="cashTitle">Cash Donation</h3>
+                    <div class="payment-details">
+                        <p data-lang="cashDesc">Visit the masjid and donate directly to our treasurer.</p>
+                        <p><strong data-lang="contactPerson">Contact Person:</strong> Abdul Karim</p>
+                        <p><strong data-lang="phone">Phone:</strong> +880-XXX-XXXXXX</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hadith Section -->
+    <section class="hadith-section">
+        <div class="container">
+            <div class="hadith-card">
+                <i class="fas fa-quote-left"></i>
+                <p class="hadith-text" data-lang="hadithText">The believer's shade on the Day of Resurrection will be his charity.</p>
+                <p class="hadith-source">— Sahih al-Bukhari</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3 data-lang="siteName">Baytul Aman Jame Masjid</h3>
+                    <p data-lang="footerAbout">A place of worship, learning, and community since 2016.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4 data-lang="quickLinks">Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html" data-lang="navAbout">About</a></li>
+                        <li><a href="committee.html" data-lang="navCommittee">Committee</a></li>
+                        <li><a href="events.html" data-lang="navEvents">Events</a></li>
+                        <li><a href="contact.html" data-lang="navContact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 data-lang="contactInfo">Contact Info</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> <span data-lang="address">Dhaka, Bangladesh</span></li>
+                        <li><i class="fas fa-phone"></i> +880-XXX-XXXXXX</li>
+                        <li><i class="fas fa-envelope"></i> info@baytulaman.org</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 data-lang="prayerTimesTitle">Prayer Times</h4>
+                    <ul>
+                        <li><span data-lang="fajr">Fajr</span>: 5:00 AM</li>
+                        <li><span data-lang="dhuhr">Dhuhr</span>: 12:30 PM</li>
+                        <li><span data-lang="maghrib">Maghrib</span>: 6:00 PM</li>
+                        <li><span data-lang="jummah">Jummah</span>: 1:30 PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 <span data-lang="siteName">Baytul Aman Jame Masjid</span>. <span data-lang="copyright">All rights reserved.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

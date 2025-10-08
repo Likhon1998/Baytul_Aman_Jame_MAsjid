@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Baytul Aman Jame Masjid</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <i class="fas fa-mosque"></i>
+                <span data-lang="siteName">Baytul Aman Jame Masjid</span>
+            </div>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" data-lang="navHome">Home</a></li>
+                <li><a href="about.html" data-lang="navAbout">About</a></li>
+                <li><a href="committee.html" data-lang="navCommittee">Committee</a></li>
+                <li><a href="donation.html" data-lang="navDonation">Donation</a></li>
+                <li><a href="gallery.html" data-lang="navGallery">Gallery</a></li>
+                <li><a href="events.html" data-lang="navEvents">Events</a></li>
+                <li><a href="contact.html" class="active" data-lang="navContact">Contact</a></li>
+                <li>
+                    <button class="lang-toggle" id="langToggle">
+                        <i class="fas fa-language"></i>
+                        <span id="currentLang">EN</span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 data-lang="contactPageTitle">Contact Us</h1>
+            <p data-lang="contactPageSubtitle">We're here to help and answer any questions you might have</p>
+        </div>
+    </section>
+
+    <!-- Contact Info Cards -->
+    <section class="contact-info-section">
+        <div class="container">
+            <div class="contact-info-grid">
+                <div class="contact-info-card fade-in">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3 data-lang="locationTitle">Location</h3>
+                    <p data-lang="addressFull">Baytul Aman Jame Masjid<br>Dhaka, Bangladesh</p>
+                </div>
+                <div class="contact-info-card fade-in">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3 data-lang="phoneTitle">Phone</h3>
+                    <p>+880-XXX-XXXXXX<br>+880-XXX-XXXXXX</p>
+                </div>
+                <div class="contact-info-card fade-in">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3 data-lang="emailTitle">Email</h3>
+                    <p>info@baytulaman.org<br>admin@baytulaman.org</p>
+                </div>
+                <div class="contact-info-card fade-in">
+                    <div class="contact-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3 data-lang="hoursTitle">Office Hours</h3>
+                    <p data-lang="officeHours">Saturday - Thursday<br>9:00 AM - 5:00 PM</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form and Map -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-form-wrapper fade-in">
+                    <h2 class="section-title" data-lang="sendMessageTitle">Send Us a Message</h2>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name" data-lang="nameLabel">Your Name</label>
+                            <input type="text" id="name" name="name" required data-lang-placeholder="namePlaceholder" placeholder="Enter your name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email" data-lang="emailLabel">Your Email</label>
+                            <input type="email" id="email" name="email" required data-lang-placeholder="emailPlaceholder" placeholder="Enter your email">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone" data-lang="phoneLabel">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" data-lang-placeholder="phonePlaceholder" placeholder="Enter your phone number">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject" data-lang="subjectLabel">Subject</label>
+                            <input type="text" id="subject" name="subject" required data-lang-placeholder="subjectPlaceholder" placeholder="Enter subject">
+                        </div>
+                        <div class="form-group">
+                            <label for="message" data-lang="messageLabel">Message</label>
+                            <textarea id="message" name="message" rows="5" required data-lang-placeholder="messagePlaceholder" placeholder="Enter your message"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" data-lang="btnSendMessage">Send Message</button>
+                    </form>
+                </div>
+                
+                <div class="map-wrapper fade-in">
+                    <h2 class="section-title" data-lang="findUsTitle">Find Us</h2>
+                    <div class="map-container">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d233667.49930294718!2d90.25487590000001!3d23.810651!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8b087026b81%3A0x8fa563bbdd5904c2!2sDhaka%2C%20Bangladesh!5e0!3m2!1sen!2s!4v1234567890123!5m2!1sen!2s" 
+                            width="100%" 
+                            height="400" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                    <a href="https://www.google.com/maps/place/Dhaka,+Bangladesh" target="_blank" class="btn btn-secondary" data-lang="btnDirections">Get Directions</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Contacts -->
+    <section class="key-contacts-section">
+        <div class="container">
+            <h2 class="section-title" data-lang="keyContactsTitle">Key Contacts</h2>
+            <div class="key-contacts-grid">
+                <div class="key-contact-card fade-in">
+                    <div class="contact-avatar">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3>Abdul Karim Ahmed</h3>
+                    <p class="contact-role" data-lang="presidentRole">President</p>
+                    <p class="contact-detail"><i class="fas fa-phone"></i> +880-XXX-XXXXXX</p>
+                    <p class="contact-detail"><i class="fas fa-envelope"></i> president@baytulaman.org</p>
+                </div>
+                <div class="key-contact-card fade-in">
+                    <div class="contact-avatar">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3>Hassan Mahmud</h3>
+                    <p class="contact-role" data-lang="secretaryRole">General Secretary</p>
+                    <p class="contact-detail"><i class="fas fa-phone"></i> +880-XXX-XXXXXX</p>
+                    <p class="contact-detail"><i class="fas fa-envelope"></i> secretary@baytulaman.org</p>
+                </div>
+                <div class="key-contact-card fade-in">
+                    <div class="contact-avatar">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3>Imam Muhammad Ali</h3>
+                    <p class="contact-role" data-lang="imamRole">Chief Imam</p>
+                    <p class="contact-detail"><i class="fas fa-phone"></i> +880-XXX-XXXXXX</p>
+                    <p class="contact-detail"><i class="fas fa-envelope"></i> imam@baytulaman.org</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title" data-lang="faqTitle">Frequently Asked Questions</h2>
+            <div class="faq-list">
+                <div class="faq-item fade-in">
+                    <button class="faq-question">
+                        <span data-lang="faq1Question">What are the prayer times?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-lang="faq1Answer">Our daily prayer times are: Fajr at 5:00 AM, Dhuhr at 12:30 PM, Asr at 4:15 PM, Maghrib at 6:00 PM, and Isha at 7:30 PM. Jummah prayer is at 1:30 PM every Friday.</p>
+                    </div>
+                </div>
+                <div class="faq-item fade-in">
+                    <button class="faq-question">
+                        <span data-lang="faq2Question">Do you offer Islamic classes?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-lang="faq2Answer">Yes, we offer Quran classes, Islamic studies, and Arabic language classes for all ages. Please contact us for registration details.</p>
+                    </div>
+                </div>
+                <div class="faq-item fade-in">
+                    <button class="faq-question">
+                        <span data-lang="faq3Question">How can I donate to the masjid?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-lang="faq3Answer">You can donate through mobile banking (bKash, Nagad, Rocket), bank transfer, or in person at the masjid. Visit our Donation page for more details.</p>
+                    </div>
+                </div>
+                <div class="faq-item fade-in">
+                    <button class="faq-question">
+                        <span data-lang="faq4Question">Can I book the masjid for events?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-lang="faq4Answer">Yes, our community hall is available for Islamic events, weddings, and programs. Please contact the office to check availability and make reservations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3 data-lang="siteName">Baytul Aman Jame Masjid</h3>
+                    <p data-lang="footerAbout">A place of worship, learning, and community since 2016.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4 data-lang="quickLinks">Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html" data-lang="navAbout">About</a></li>
+                        <li><a href="committee.html" data-lang="navCommittee">Committee</a></li>
+                        <li><a href="events.html" data-lang="navEvents">Events</a></li>
+                        <li><a href="contact.html" data-lang="navContact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 data-lang="contactInfo">Contact Info</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> <span data-lang="address">Dhaka, Bangladesh</span></li>
+                        <li><i class="fas fa-phone"></i> +880-XXX-XXXXXX</li>
+                        <li><i class="fas fa-envelope"></i> info@baytulaman.org</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 data-lang="prayerTimesTitle">Prayer Times</h4>
+                    <ul>
+                        <li><span data-lang="fajr">Fajr</span>: 5:00 AM</li>
+                        <li><span data-lang="dhuhr">Dhuhr</span>: 12:30 PM</li>
+                        <li><span data-lang="maghrib">Maghrib</span>: 6:00 PM</li>
+                        <li><span data-lang="jummah">Jummah</span>: 1:30 PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 <span data-lang="siteName">Baytul Aman Jame Masjid</span>. <span data-lang="copyright">All rights reserved.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

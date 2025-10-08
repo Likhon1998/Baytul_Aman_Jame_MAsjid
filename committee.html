@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Committee - Baytul Aman Jame Masjid</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <i class="fas fa-mosque"></i>
+                <span data-lang="siteName">Baytul Aman Jame Masjid</span>
+            </div>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" data-lang="navHome">Home</a></li>
+                <li><a href="about.html" data-lang="navAbout">About</a></li>
+                <li><a href="committee.html" class="active" data-lang="navCommittee">Committee</a></li>
+                <li><a href="donation.html" data-lang="navDonation">Donation</a></li>
+                <li><a href="gallery.html" data-lang="navGallery">Gallery</a></li>
+                <li><a href="events.html" data-lang="navEvents">Events</a></li>
+                <li><a href="contact.html" data-lang="navContact">Contact</a></li>
+                <li>
+                    <button class="lang-toggle" id="langToggle">
+                        <i class="fas fa-language"></i>
+                        <span id="currentLang">EN</span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 data-lang="committeePageTitle">Our Supporters</h1>
+            <p data-lang="committeePageSubtitle">Honoring those who have generously contributed to our masjid</p>
+        </div>
+    </section>
+
+    <!-- Donor Stats -->
+    <section class="donor-stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <i class="fas fa-star"></i>
+                    <h3 class="counter" data-target="12">0</h3>
+                    <p data-lang="motowalliMembers">Motowalli Sodossho</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-heart"></i>
+                    <h3 class="counter" data-target="45">0</h3>
+                    <p data-lang="lifetimeMembers">Ajibon Sodossho</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-hand-holding-usd"></i>
+                    <h3 class="counter" data-target="1800000">0</h3>
+                    <p data-lang="totalDonations">Total Donations (BDT)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Motowalli Sodossho Section -->
+    <section class="members-section">
+        <div class="container">
+            <h2 class="section-title" data-lang="motowalliTitle">Motowalli Sodossho</h2>
+            <p class="section-subtitle" data-lang="motowalliSubtitle">Honored members who have donated ৳1,00,000 or more</p>
+            <div class="members-grid">
+                <div class="member-card fade-in">
+                    <div class="member-image">
+                        <img src="https://ui-avatars.com/api/?name=Abul+Kalam+Ajad&size=200&background=d4af37&color=1a1a1a" alt="Member">
+                        <div class="member-badge gold">
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <h3>Md. Abul Kalam Ajad</h3>
+                    <p class="member-type" data-lang="motowalliMember">Motowalli Sodossho</p>
+                    <p class="donation-amount">৳1,50,000</p>
+                </div>
+                <div class="member-card fade-in">
+                    <div class="member-image">
+                        <img src="https://ui-avatars.com/api/?name=Tofazzol+Hossain+Rayhan&size=200&background=d4af37&color=1a1a1a" alt="Member">
+                        <div class="member-badge gold">
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <h3>Md. Tofazzol Hossain Rayhan</h3>
+                    <p class="member-type" data-lang="motowalliMember">Motowalli Sodossho</p>
+                    <p class="donation-amount">৳2,00,000</p>
+                </div>
+                <div class="member-card fade-in">
+                    <div class="member-image">
+                        <img src="https://ui-avatars.com/api/?name=Md+Shamsul+Haque&size=200&background=d4af37&color=1a1a1a" alt="Member">
+                        <div class="member-badge gold">
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <h3>Md. Shamsul Haque</h3>
+                    <p class="member-type" data-lang="motowalliMember">Motowalli Sodossho</p>
+                    <p class="donation-amount">৳1,20,000</p>
+                </div>
+                <div class="member-card fade-in">
+                    <div class="member-image">
+                        <img src="https://ui-avatars.com/api/?name=Kamal+Uddin+Ahmed&size=200&background=d4af37&color=1a1a1a" alt="Member">
+                        <div class="member-badge gold">
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <h3>Kamal Uddin Ahmed</h3>
+                    <p class="member-type" data-lang="motowalliMember">Motowalli Sodossho</p>
+                    <p class="donation-amount">৳1,00,000</p>
+                </div>
+                <div class="member-card fade-in">
+                    <div class="member-image">
+                        <img src="https://ui-avatars.com/api/?name=Rafiqul+Islam&size=200&background=d4af37&color=1a1a1a" alt="Member">
+                        <div class="member-badge gold">
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <h3>Rafiqul Islam</h3>
+                    <p class="member-type" data-lang="motowalliMember">Motowalli Sodossho</p>
+                    <p class="donation-amount">৳1,10,000</p>
+                </div>
+                <div class="member-card fade-in">
+                    <div class="member-image">
+                        <img src="https://ui-avatars.com/api/?name=Nazrul+Islam&size=200&background=d4af37&color=1a1a1a" alt="Member">
+                        <div class="member-badge gold">
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <h3>Nazrul Islam</h3>
+                    <p class="member-type" data-lang="motowalliMember">Motowalli Sodossho</p>
+                    <p class="donation-amount">৳1,00,000</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ajibon Sodossho Section -->
+    <section class="members-section alternate">
+        <div class="container">
+            <h2 class="section-title" data-lang="ajibonTitle">Ajibon Sodossho</h2>
+            <p class="section-subtitle" data-lang="ajibonSubtitle">Lifetime members who have donated ৳30,000</p>
+            <div class="members-grid">
+                <div class="member-card fade-in">
+                    <div class="member-image">
+                        <img src="https://ui-avatars.com/api/?name=Aminul+Haque&size=200&background=2d5f2e&color=fff" alt="Member">
+                        <div class="member-badge silver">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                    </div>
+                    <h3>Aminul Haque</h3>
+                    <p class="member-type" data-lang="ajibonMember">Ajibon Sodossho</p>
+                    <p class="donation-amount">৳30,000</p>
+                </div>
+                <div class="member-card fade-in">
+                    <div class="member-image">
+                        <img src="https://ui-avatars.com/api/?name=Fazlul+Karim&size=200&background=2d5f2e&color=fff" alt="Member">
+                        <div class="member-badge silver">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                    </div>
+                    <h3>Fazlul Karim</h3>
+                    <p class="member-type" data-lang="ajibonMember">Ajibon Sodossho</p>
+                    <p class="donation-amount">৳30,000</p>
+                </div>
+                <div class="member-card fade-in">
+                    <div class="member-image">
+                        <img src="https://ui-avatars.com/api/?name=Jahangir+Alam&size=200&background=2d5f2e&color=fff" alt="Member">
+                        <div class="member-badge silver">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                    </div>
+                    <h3>Jahangir Alam</h3>
+                    <p class="member-type" data-lang="ajibonMember">Ajibon Sodossho</p>
+                    <p class="donation-amount">৳30,000</p>
+                </div>
+                <div class="member-card fade-in">
+                    <div class="member-image">
+                        <img src="https://ui-avatars.com/api/?name=Sirajul+Islam&size=200&background=2d5f2e&color=fff" alt="Member">
+                        <div class="member-badge silver">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                    </div>
+                    <h3>Sirajul Islam</h3>
+                    <p class="member-type" data-lang="ajibonMember">Ajibon Sodossho</p>
+                    <p class="donation-amount">৳30,000</p>
+                </div>
+                <div class="member-card fade-in">
+                    <div class="member-image">
+                        <img src="https://ui-avatars.com/api/?name=Nurul+Amin&size=200&background=2d5f2e&color=fff" alt="Member">
+                        <div class="member-badge silver">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                    </div>
+                    <h3>Nurul Amin</h3>
+                    <p class="member-type" data-lang="ajibonMember">Ajibon Sodossho</p>
+                    <p class="donation-amount">৳30,000</p>
+                </div>
+                <div class="member-card fade-in">
+                    <div class="member-image">
+                        <img src="https://ui-avatars.com/api/?name=Habibur+Rahman&size=200&background=2d5f2e&color=fff" alt="Member">
+                        <div class="member-badge silver">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                    </div>
+                    <h3>Habibur Rahman</h3>
+                    <p class="member-type" data-lang="ajibonMember">Ajibon Sodossho</p>
+                    <p class="donation-amount">৳30,000</p>
+                </div>
+                <div class="member-card fade-in">
+                    <div class="member-image">
+                        <img src="https://ui-avatars.com/api/?name=Akhtar+Hossain&size=200&background=2d5f2e&color=fff" alt="Member">
+                        <div class="member-badge silver">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                    </div>
+                    <h3>Akhtar Hossain</h3>
+                    <p class="member-type" data-lang="ajibonMember">Ajibon Sodossho</p>
+                    <p class="donation-amount">৳30,000</p>
+                </div>
+                <div class="member-card fade-in">
+                    <div class="member-image">
+                        <img src="https://ui-avatars.com/api/?name=Delwar+Hossain&size=200&background=2d5f2e&color=fff" alt="Member">
+                        <div class="member-badge silver">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                    </div>
+                    <h3>Delwar Hossain</h3>
+                    <p class="member-type" data-lang="ajibonMember">Ajibon Sodossho</p>
+                    <p class="donation-amount">৳30,000</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta">
+        <div class="container">
+            <h2 data-lang="ctaJoinTitle">Join Our Community</h2>
+            <p data-lang="ctaJoinText">Become a lifetime member and support the growth of our masjid</p>
+            <a href="donation.html" class="btn btn-light" data-lang="btnLearnMore">Learn More</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3 data-lang="siteName">Baytul Aman Jame Masjid</h3>
+                    <p data-lang="footerAbout">A place of worship, learning, and community since 2016.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4 data-lang="quickLinks">Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html" data-lang="navAbout">About</a></li>
+                        <li><a href="committee.html" data-lang="navCommittee">Committee</a></li>
+                        <li><a href="events.html" data-lang="navEvents">Events</a></li>
+                        <li><a href="contact.html" data-lang="navContact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 data-lang="contactInfo">Contact Info</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> <span data-lang="address">Dhaka, Bangladesh</span></li>
+                        <li><i class="fas fa-phone"></i> +880-XXX-XXXXXX</li>
+                        <li><i class="fas fa-envelope"></i> info@baytulaman.org</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 data-lang="prayerTimesTitle">Prayer Times</h4>
+                    <ul>
+                        <li><span data-lang="fajr">Fajr</span>: 5:00 AM</li>
+                        <li><span data-lang="dhuhr">Dhuhr</span>: 12:30 PM</li>
+                        <li><span data-lang="maghrib">Maghrib</span>: 6:00 PM</li>
+                        <li><span data-lang="jummah">Jummah</span>: 1:30 PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 <span data-lang="siteName">Baytul Aman Jame Masjid</span>. <span data-lang="copyright">All rights reserved.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
