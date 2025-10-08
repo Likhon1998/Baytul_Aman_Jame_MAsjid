@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Baytul Aman Jame Masjid</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 640 512%22><path fill=%22%232ecc71%22 d=%22M400 0c5 0 9.8 2.4 12.8 6.4c34.7 46.3 78.1 74.9 133.5 111.5c28.9 19.2 45.7 51.7 45.7 86.1V512H352V384c0-35.3-28.7-64-64-64s-64 28.7-64 64V512H48V204c0-34.4 16.7-66.9 45.7-86.1C149.1 81.5 192.5 52.9 227.2 6.4C230.2 2.4 235 0 240 0H400zM288 192c0-17.7-14.3-32-32-32s-32 14.3-32 32s14.3 32 32 32s32-14.3 32-32zm64 32c17.7 0 32-14.3 32-32s-14.3-32-32-32s-32 14.3-32 32s14.3 32 32 32zm96-32c0-17.7-14.3-32-32-32s-32 14.3-32 32s14.3 32 32 32s32-14.3 32-32z%22/></svg>">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <i class="fas fa-mosque"></i>
+                <span data-lang="siteName">Baytul Aman Jame Masjid</span>
+            </div>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" data-lang="navHome">Home</a></li>
+                <li><a href="about.html" data-lang="navAbout">About</a></li>
+                <li><a href="committee.html" data-lang="navCommittee">Committee</a></li>
+                <li><a href="donation.html" data-lang="navDonation">Donation</a></li>
+                <li><a href="gallery.html" class="active" data-lang="navGallery">Gallery</a></li>
+                <li><a href="events.html" data-lang="navEvents">Events</a></li>
+                <li><a href="contact.html" data-lang="navContact">Contact</a></li>
+                <li>
+                    <button class="lang-toggle" id="langToggle">
+                        <i class="fas fa-language"></i>
+                        <span id="currentLang">EN</span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 data-lang="galleryPageTitle">Photo Gallery</h1>
+            <p data-lang="galleryPageSubtitle">Moments from our masjid and community events</p>
+        </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section class="gallery-section">
+        <div class="container">
+            <div class="gallery-grid">
+                <div class="gallery-item fade-in" data-category="mosque">
+                    <img src="https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?w=600" alt="Mosque">
+                    <div class="gallery-overlay">
+                        <h3 data-lang="galleryMosque">Mosque Exterior</h3>
+                        <button class="gallery-btn" onclick="openLightbox(0)">
+                            <i class="fas fa-search-plus"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="gallery-item fade-in" data-category="prayer">
+                  <img src="https://images.unsplash.com/photo-1584450896363-e47e92094771?w=600" alt="Prayer Hall">
+                    <div class="gallery-overlay">
+                        <h3 data-lang="galleryPrayer">Prayer Hall</h3>
+                        <button class="gallery-btn" onclick="openLightbox(1)">
+                            <i class="fas fa-search-plus"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="gallery-item fade-in" data-category="events">
+                    <img src="https://images.unsplash.com/photo-1590859808308-3d2d9c515b1a?w=600" alt="Eid Celebration">
+                    <div class="gallery-overlay">
+                        <h3 data-lang="galleryEid">Eid Celebration</h3>
+                        <button class="gallery-btn" onclick="openLightbox(2)">
+                            <i class="fas fa-search-plus"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="gallery-item fade-in" data-category="education">
+                    <img src="https://images.unsplash.com/photo-1609599006353-e629aaabfeae?w=400&h=300&fit=crop" alt="Quran Class">
+                    <div class="gallery-overlay">
+                        <h3 data-lang="galleryQuran">Quran Class</h3>
+                        <button class="gallery-btn" onclick="openLightbox(3)">
+                            <i class="fas fa-search-plus"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="gallery-item fade-in" data-category="events">
+                    <img src="https://images.unsplash.com/photo-1604610829685-4a8a22bc86fc?w=400&h=300&fit=crop" alt="Community Iftar">
+                    <div class="gallery-overlay">
+                        <h3 data-lang="galleryIftar">Community Iftar</h3>
+                        <button class="gallery-btn" onclick="openLightbox(4)">
+                            <i class="fas fa-search-plus"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="gallery-item fade-in" data-category="mosque">
+                    <img src="https://images.unsplash.com/photo-1564769610775-275ee148b23b?w=400&h=300&fit=crop" alt="Mosque Interior">
+                    <div class="gallery-overlay">
+                        <h3 data-lang="galleryInterior">Mosque Interior</h3>
+                        <button class="gallery-btn" onclick="openLightbox(5)">
+                            <i class="fas fa-search-plus"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="gallery-item fade-in" data-category="prayer">
+                    <img src="https://images.unsplash.com/photo-1605552070854-fb65e6e5c0b2?w=400&h=300&fit=crop" alt="Jummah Prayer">
+                    <div class="gallery-overlay">
+                        <h3 data-lang="galleryJummah">Jummah Prayer</h3>
+                        <button class="gallery-btn" onclick="openLightbox(6)">
+                            <i class="fas fa-search-plus"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="gallery-item fade-in" data-category="events">
+                    <img src="https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?w=400&h=300&fit=crop" alt="Ramadan Night">
+                    <div class="gallery-overlay">
+                        <h3 data-lang="galleryRamadan">Ramadan Night</h3>
+                        <button class="gallery-btn" onclick="openLightbox(7)">
+                            <i class="fas fa-search-plus"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="gallery-item fade-in" data-category="education">
+                    <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=400&h=300&fit=crop" alt="Islamic Studies">
+                    <div class="gallery-overlay">
+                        <h3 data-lang="galleryStudies">Islamic Studies</h3>
+                        <button class="gallery-btn" onclick="openLightbox(8)">
+                            <i class="fas fa-search-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" onclick="closeLightbox()">
+            <i class="fas fa-times"></i>
+        </button>
+        <button class="lightbox-prev" onclick="changeLightbox(-1)">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="lightbox-next" onclick="changeLightbox(1)">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+        <img id="lightbox-img" src="" alt="Gallery Image">
+        <div class="lightbox-caption" id="lightbox-caption"></div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3 data-lang="siteName">Baytul Aman Jame Masjid</h3>
+                    <p data-lang="footerAbout">A place of worship, learning, and community since 2016.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4 data-lang="quickLinks">Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html" data-lang="navAbout">About</a></li>
+                        <li><a href="committee.html" data-lang="navCommittee">Committee</a></li>
+                        <li><a href="events.html" data-lang="navEvents">Events</a></li>
+                        <li><a href="contact.html" data-lang="navContact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 data-lang="contactInfo">Contact Info</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> <span data-lang="address">Shapla Society, Uttarkhan, Dhaka, Bangladesh</span></li>
+                        <li><i class="fas fa-phone"></i> +880-1995-094669</li>
+                        <li><i class="fas fa-envelope"></i></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 data-lang="prayerTimesTitle">Prayer Times</h4>
+                    <ul>
+                        <li><span data-lang="fajr">Fajr</span>: 5:20 AM</li>
+                        <li><span data-lang="dhuhr">Jhuhr</span>: 1:15 PM</li>
+                        <li><span data-lang="asr">Asr</span>: 4:30 PM</li>
+                        <li><span data-lang="maghrib">Maghrib</span>: 5:43 PM</li>
+                        <li><span data-lang="isha">Isha</span>: 7:30 PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 <span data-lang="siteName">Baytul Aman Jame Masjid</span>. <span data-lang="copyright">All rights reserved.</span></p>
+                <p>Powered by <a href="https://likhon1998.github.io/Nahid.-Portfolio/" target="_blank">Md. Nahid Hosain Likhon</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

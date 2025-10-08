@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - Baytul Aman Jame Masjid</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 640 512%22><path fill=%22%232ecc71%22 d=%22M400 0c5 0 9.8 2.4 12.8 6.4c34.7 46.3 78.1 74.9 133.5 111.5c28.9 19.2 45.7 51.7 45.7 86.1V512H352V384c0-35.3-28.7-64-64-64s-64 28.7-64 64V512H48V204c0-34.4 16.7-66.9 45.7-86.1C149.1 81.5 192.5 52.9 227.2 6.4C230.2 2.4 235 0 240 0H400zM288 192c0-17.7-14.3-32-32-32s-32 14.3-32 32s14.3 32 32 32s32-14.3 32-32zm64 32c17.7 0 32-14.3 32-32s-14.3-32-32-32s-32 14.3-32 32s14.3 32 32 32zm96-32c0-17.7-14.3-32-32-32s-32 14.3-32 32s14.3 32 32 32s32-14.3 32-32z%22/></svg>">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <i class="fas fa-mosque"></i>
+                <span data-lang="siteName">Baytul Aman Jame Masjid</span>
+            </div>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" data-lang="navHome">Home</a></li>
+                <li><a href="about.html" data-lang="navAbout">About</a></li>
+                <li><a href="committee.html" data-lang="navCommittee">Committee</a></li>
+                <li><a href="donation.html" data-lang="navDonation">Donation</a></li>
+                <li><a href="gallery.html" data-lang="navGallery">Gallery</a></li>
+                <li><a href="events.html" class="active" data-lang="navEvents">Events</a></li>
+                <li><a href="contact.html" data-lang="navContact">Contact</a></li>
+                <li>
+                    <button class="lang-toggle" id="langToggle">
+                        <i class="fas fa-language"></i>
+                        <span id="currentLang">EN</span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 data-lang="eventsPageTitle">Events & Notices</h1>
+            <p data-lang="eventsPageSubtitle">Stay updated with our upcoming programs and announcements</p>
+        </div>
+    </section>
+
+    <!-- Upcoming Events -->
+    <section class="events-section">
+        <div class="container">
+            <h2 class="section-title" data-lang="upcomingEventsTitle">Upcoming Events</h2>
+            <div class="events-grid">
+                <div class="event-card fade-in featured">
+                    <div class="event-date">
+                        <span class="day">15</span>
+                        <span class="month" data-lang="march">March</span>
+                    </div>
+                    <div class="event-content">
+                        <span class="event-badge" data-lang="featured">Featured</span>
+                        <h3 data-lang="event1Title">Eid ul-Fitr Prayer</h3>
+                        <p data-lang="event1Desc">Join us for Eid prayer and community celebration. Two prayer sessions will be held.</p>
+                        <div class="event-details">
+                            <span><i class="far fa-clock"></i> 8:00 AM & 9:30 AM</span>
+                            <span><i class="fas fa-map-marker-alt"></i> <span data-lang="mainHall">Main Prayer Hall</span></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="event-card fade-in">
+                    <div class="event-date">
+                        <span class="day">20</span>
+                        <span class="month" data-lang="march">March</span>
+                    </div>
+                    <div class="event-content">
+                        <h3 data-lang="event2Title">Quran Competition for Youth</h3>
+                        <p data-lang="event2Desc">Annual Quran recitation and memorization competition for ages 7-16.</p>
+                        <div class="event-details">
+                            <span><i class="far fa-clock"></i> 4:00 PM</span>
+                            <span><i class="fas fa-map-marker-alt"></i> <span data-lang="communityHall">Community Hall</span></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="event-card fade-in">
+                    <div class="event-date">
+                        <span class="day">25</span>
+                        <span class="month" data-lang="march">March</span>
+                    </div>
+                    <div class="event-content">
+                        <h3 data-lang="event3Title">Islamic Finance Workshop</h3>
+                        <p data-lang="event3Desc">Learn about Islamic banking, investment, and financial planning from experts.</p>
+                        <div class="event-details">
+                            <span><i class="far fa-clock"></i> 6:00 PM - 8:00 PM</span>
+                            <span><i class="fas fa-map-marker-alt"></i> <span data-lang="meetingRoom">Meeting Room</span></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="event-card fade-in">
+                    <div class="event-date">
+                        <span class="day">30</span>
+                        <span class="month" data-lang="march">March</span>
+                    </div>
+                    <div class="event-content">
+                        <h3 data-lang="event4Title">Community Iftar Program</h3>
+                        <p data-lang="event4Desc">Join us for a community iftar meal during Ramadan. All are welcome.</p>
+                        <div class="event-details">
+                            <span><i class="far fa-clock"></i> 6:15 PM</span>
+                            <span><i class="fas fa-map-marker-alt"></i> <span data-lang="communityHall">Community Hall</span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Important Notices -->
+    <section class="notices-section">
+        <div class="container">
+            <h2 class="section-title" data-lang="noticesTitle">Important Notices</h2>
+            <div class="notices-list">
+                <div class="notice-card fade-in">
+                    <div class="notice-icon urgent">
+                        <i class="fas fa-exclamation-circle"></i>
+                    </div>
+                    <div class="notice-content">
+                        <h3 data-lang="notice1Title">Ramadan Schedule Updated</h3>
+                        <p data-lang="notice1Desc">Prayer times have been updated for the month of Ramadan. Taraweeh prayers will begin at 8:30 PM daily.</p>
+                        <span class="notice-date">Posted: March 10, 2025</span>
+                    </div>
+                </div>
+                <div class="notice-card fade-in">
+                    <div class="notice-icon info">
+                        <i class="fas fa-info-circle"></i>
+                    </div>
+                    <div class="notice-content">
+                        <h3 data-lang="notice2Title">New Quran Classes Starting</h3>
+                        <p data-lang="notice2Desc">Registration is now open for new Quran classes for children. Limited seats available. Contact the office for details.</p>
+                        <span class="notice-date">Posted: March 5, 2025</span>
+                    </div>
+                </div>
+                <div class="notice-card fade-in">
+                    <div class="notice-icon success">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div class="notice-content">
+                        <h3 data-lang="notice3Title">Expansion Project Update</h3>
+                        <p data-lang="notice3Desc">We have reached 71% of our goal for the prayer hall expansion. Thank you to all donors for your generous support!</p>
+                        <span class="notice-date">Posted: March 1, 2025</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Weekly Programs -->
+    <section class="programs-section">
+        <div class="container">
+            <h2 class="section-title" data-lang="weeklyProgramsTitle">Weekly Programs</h2>
+            <div class="programs-grid">
+                <div class="program-card fade-in">
+                    <i class="fas fa-book-quran"></i>
+                    <h3 data-lang="program1Title">Quran Study Circle</h3>
+                    <p data-lang="program1Time">Every Friday after Maghrib</p>
+                    <p data-lang="program1Desc">Join us for Tafsir study and discussion</p>
+                </div>
+                <div class="program-card fade-in">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    <h3 data-lang="program2Title">Islamic Studies for Kids</h3>
+                    <p data-lang="program2Time">Saturday & Sunday, 10:00 AM</p>
+                    <p data-lang="program2Desc">Ages 6-14, Quran and Islamic education</p>
+                </div>
+                <div class="program-card fade-in">
+                    <i class="fas fa-users"></i>
+                    <h3 data-lang="program3Title">Sisters Gathering</h3>
+                    <p data-lang="program3Time">Every Wednesday, 3:00 PM</p>
+                    <p data-lang="program3Desc">Halaqa, discussion, and community building</p>
+                </div>
+                <div class="program-card fade-in">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3 data-lang="program4Title">Arabic Language Class</h3>
+                    <p data-lang="program4Time">Tuesday & Thursday, 7:00 PM</p>
+                    <p data-lang="program4Desc">Learn to read and understand Arabic</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3 data-lang="siteName">Baytul Aman Jame Masjid</h3>
+                    <p data-lang="footerAbout">A place of worship, learning, and community since 2016.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4 data-lang="quickLinks">Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html" data-lang="navAbout">About</a></li>
+                        <li><a href="committee.html" data-lang="navCommittee">Committee</a></li>
+                        <li><a href="events.html" data-lang="navEvents">Events</a></li>
+                        <li><a href="contact.html" data-lang="navContact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 data-lang="contactInfo">Contact Info</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> <span data-lang="address">Shapla Society, Uttarkhan, Dhaka, Bangladesh</span></li>
+                        <li><i class="fas fa-phone"></i> +880-1995-094669</li>
+                        <li><i class="fas fa-envelope"></i> </li>
+                </div>
+                <div class="footer-col">
+                    <h4 data-lang="prayerTimesTitle">Prayer Times</h4>
+                    <ul>
+                        <li><span data-lang="fajr">Fajr</span>: 5:20 AM</li>
+                        <li><span data-lang="dhuhr">Jhuhr</span>: 1:15 PM</li>\
+                        <li><span data-lang="asr">Asr</span>: 4:30 PM</li>
+                        <li><span data-lang="maghrib">Maghrib</span>: 5:43 PM</li>
+                        <li><span data-lang="isha">Isha</span>: 7:30 PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 <span data-lang="siteName">Baytul Aman Jame Masjid</span>. <span data-lang="copyright">All rights reserved.</span></p>
+                <p>Powered by <a href="https://likhon1998.github.io/Nahid.-Portfolio/" target="_blank">Md. Nahid Hosain Likhon</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
