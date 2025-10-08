@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Committee - Baytul Aman Jame Masjid</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 640 512%22><path fill=%22%232ecc71%22 d=%22M400 0c5 0 9.8 2.4 12.8 6.4c34.7 46.3 78.1 74.9 133.5 111.5c28.9 19.2 45.7 51.7 45.7 86.1V512H352V384c0-35.3-28.7-64-64-64s-64 28.7-64 64V512H48V204c0-34.4 16.7-66.9 45.7-86.1C149.1 81.5 192.5 52.9 227.2 6.4C230.2 2.4 235 0 240 0H400zM288 192c0-17.7-14.3-32-32-32s-32 14.3-32 32s14.3 32 32 32s32-14.3 32-32zm64 32c17.7 0 32-14.3 32-32s-14.3-32-32-32s-32 14.3-32 32s14.3 32 32 32zm96-32c0-17.7-14.3-32-32-32s-32 14.3-32 32s14.3 32 32 32s32-14.3 32-32z%22/></svg>">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -53,12 +54,12 @@
             <div class="stats-grid">
                 <div class="stat-card">
                     <i class="fas fa-star"></i>
-                    <h3 class="counter" data-target="12">0</h3>
+                    <h3 class="counter" data-target="30">0</h3>
                     <p data-lang="motowalliMembers">Motowalli Sodossho</p>
                 </div>
                 <div class="stat-card">
                     <i class="fas fa-heart"></i>
-                    <h3 class="counter" data-target="45">0</h3>
+                    <h3 class="counter" data-target="70">0</h3>
                     <p data-lang="lifetimeMembers">Ajibon Sodossho</p>
                 </div>
                 <div class="stat-card">
@@ -67,11 +68,27 @@
                     <p data-lang="totalDonations">Total Donations (BDT)</p>
                 </div>
             </div>
+            
+            <!-- Filter Buttons -->
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">
+                    <i class="fas fa-users"></i>
+                    <span data-lang="filterAll">All Members</span>
+                </button>
+                <button class="filter-btn" data-filter="motowalli">
+                    <i class="fas fa-star"></i>
+                    <span data-lang="filterMotowalli">Motowalli Sodossho</span>
+                </button>
+                <button class="filter-btn" data-filter="ajibon">
+                    <i class="fas fa-heart"></i>
+                    <span data-lang="filterAjibon">Ajibon Sodossho</span>
+                </button>
+            </div>
         </div>
     </section>
 
     <!-- Motowalli Sodossho Section -->
-    <section class="members-section">
+    <section class="members-section" id="motowalliSection">
         <div class="container">
             <h2 class="section-title" data-lang="motowalliTitle">Motowalli Sodossho</h2>
             <p class="section-subtitle" data-lang="motowalliSubtitle">Honored members who have donated ৳1,00,000 or more</p>
@@ -89,6 +106,28 @@
                 </div>
                 <div class="member-card fade-in">
                     <div class="member-image">
+                        <img src="https://ui-avatars.com/api/?name=Rakib+Ahmed+Sumon&size=200&background=d4af37&color=1a1a1a" alt="Member">
+                        <div class="member-badge gold">
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <h3>Rakib Ahmed Sumon</h3>
+                    <p class="member-type" data-lang="motowalliMember">Motowalli Sodossho</p>
+                    <p class="donation-amount">৳2,00,000</p>
+                </div>
+                <div class="member-card fade-in">
+                    <div class="member-image">
+                        <img src="https://ui-avatars.com/api/?name=Shohidul+Islam&size=200&background=d4af37&color=1a1a1a" alt="Member">
+                        <div class="member-badge gold">
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <h3>Md. Shohidul Islam</h3>
+                    <p class="member-type" data-lang="motowalliMember">Motowalli Sodossho</p>
+                    <p class="donation-amount">৳1,20,000</p>
+                </div>
+                <div class="member-card fade-in">
+                    <div class="member-image">
                         <img src="https://ui-avatars.com/api/?name=Tofazzol+Hossain+Rayhan&size=200&background=d4af37&color=1a1a1a" alt="Member">
                         <div class="member-badge gold">
                             <i class="fas fa-star"></i>
@@ -96,58 +135,466 @@
                     </div>
                     <h3>Md. Tofazzol Hossain Rayhan</h3>
                     <p class="member-type" data-lang="motowalliMember">Motowalli Sodossho</p>
-                    <p class="donation-amount">৳2,00,000</p>
-                </div>
-                <div class="member-card fade-in">
-                    <div class="member-image">
-                        <img src="https://ui-avatars.com/api/?name=Md+Shamsul+Haque&size=200&background=d4af37&color=1a1a1a" alt="Member">
-                        <div class="member-badge gold">
-                            <i class="fas fa-star"></i>
-                        </div>
-                    </div>
-                    <h3>Md. Shamsul Haque</h3>
-                    <p class="member-type" data-lang="motowalliMember">Motowalli Sodossho</p>
-                    <p class="donation-amount">৳1,20,000</p>
-                </div>
-                <div class="member-card fade-in">
-                    <div class="member-image">
-                        <img src="https://ui-avatars.com/api/?name=Kamal+Uddin+Ahmed&size=200&background=d4af37&color=1a1a1a" alt="Member">
-                        <div class="member-badge gold">
-                            <i class="fas fa-star"></i>
-                        </div>
-                    </div>
-                    <h3>Kamal Uddin Ahmed</h3>
-                    <p class="member-type" data-lang="motowalliMember">Motowalli Sodossho</p>
                     <p class="donation-amount">৳1,00,000</p>
                 </div>
                 <div class="member-card fade-in">
                     <div class="member-image">
-                        <img src="https://ui-avatars.com/api/?name=Rafiqul+Islam&size=200&background=d4af37&color=1a1a1a" alt="Member">
+                        <img src="https://ui-avatars.com/api/?name=Rejwana+Rahman+Bonani&size=200&background=d4af37&color=1a1a1a" alt="Member">
                         <div class="member-badge gold">
                             <i class="fas fa-star"></i>
                         </div>
                     </div>
-                    <h3>Rafiqul Islam</h3>
+                    <h3>Rejwana Rahman Bonani</h3>
                     <p class="member-type" data-lang="motowalliMember">Motowalli Sodossho</p>
                     <p class="donation-amount">৳1,10,000</p>
                 </div>
                 <div class="member-card fade-in">
                     <div class="member-image">
-                        <img src="https://ui-avatars.com/api/?name=Nazrul+Islam&size=200&background=d4af37&color=1a1a1a" alt="Member">
+                        <img src="https://ui-avatars.com/api/?name=Md+A+B+Siddik&size=200&background=d4af37&color=1a1a1a" alt="Member">
                         <div class="member-badge gold">
                             <i class="fas fa-star"></i>
                         </div>
                     </div>
-                    <h3>Nazrul Islam</h3>
+                    <h3>Md. A B Siddik</h3>
                     <p class="member-type" data-lang="motowalliMember">Motowalli Sodossho</p>
                     <p class="donation-amount">৳1,00,000</p>
                 </div>
+                <div class="member-card fade-in">
+                    <div class="member-image">
+                        <img src="https://ui-avatars.com/api/?name=Asma+Irin&size=200&background=d4af37&color=1a1a1a" alt="Member">
+                        <div class="member-badge gold">
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <h3>Asma Irin</h3>
+                    <p class="member-type" data-lang="motowalliMember">Motowalli Sodossho</p>
+                    <p class="donation-amount">৳1,00,000</p>
+                </div>
+                <div class="member-card fade-in">
+                    <div class="member-image">
+                        <img src="assets/pic.jpeg" alt="Member">
+                        <div class="member-badge gold">
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <h3>Ahmed Hossain</h3>
+                    <p class="member-type" data-lang="motowalliMember">Motowalli Sodossho</p>
+                    <p class="donation-amount">৳1,00,000</p>
+                </div>
+                <div class="member-card fade-in">
+                    <div class="member-image">
+                        <img src="https://ui-avatars.com/api/?name=Howlader+Abu+Siddik&size=200&background=d4af37&color=1a1a1a" alt="Member">
+                        <div class="member-badge gold">
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <h3>Howlader Abu Siddik</h3>
+                    <p class="member-type" data-lang="motowalliMember">Motowalli Sodossho</p>
+                    <p class="donation-amount">৳1,00,000</p>
+                </div>
+                <div class="member-card fade-in">
+                    <div class="member-image">
+                        <img src="https://ui-avatars.com/api/?name=MD.+Fazlul+Haque+Akondo&size=200&background=d4af37&color=1a1a1a" alt="Member">
+                        <div class="member-badge gold">
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <h3>MD. Fazlul Haque Akondo</h3>
+                    <p class="member-type" data-lang="motowalliMember">Motowalli Sodossho</p>
+                    <p class="donation-amount">৳1,00,000</p>
+                </div>
+                <div class="member-card fade-in">
+                    <div class="member-image">
+                        <img src="https://ui-avatars.com/api/?name=Md.+Shahjahan+Howlader&size=200&background=d4af37&color=1a1a1a" alt="Member">
+                        <div class="member-badge gold">
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <h3>Md. Shahjahan Howlader</h3>
+                    <p class="member-type" data-lang="motowalliMember">Motowalli Sodossho</p>
+                    <p class="donation-amount">৳1,00,000</p>
+                </div>
+                <div class="member-card fade-in">
+                    <div class="member-image">
+                        <img src="https://ui-avatars.com/api/?name=Md.+Shamim+Hossain&size=200&background=d4af37&color=1a1a1a" alt="Member">
+                        <div class="member-badge gold">
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <h3>Md. Shamim Hossain</h3>
+                    <p class="member-type" data-lang="motowalliMember">Motowalli Sodossho</p>
+                    <p class="donation-amount">৳1,00,000</p>
+                </div>
+                <div class="member-card fade-in">
+                    <div class="member-image">
+                        <img src="https://ui-avatars.com/api/?name=Md.+Tajul+Islam&size=200&background=d4af37&color=1a1a1a" alt="Member">
+                        <div class="member-badge gold">
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <h3>Md. Tajul Islam</h3>
+                    <p class="member-type" data-lang="motowalliMember">Motowalli Sodossho</p>
+                    <p class="donation-amount">৳1,00,000</p>
+                </div>
+                <div class="member-card fade-in">
+                    <div class="member-image">
+                        <img src="https://ui-avatars.com/api/?name=Md.+Shikim+Ali+Shikder&size=200&background=d4af37&color=1a1a1a" alt="Member">
+                        <div class="member-badge gold">
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <h3>Md. Shikim Ali Shikder</h3>
+                    <p class="member-type" data-lang="motowalliMember">Motowalli Sodossho</p>
+                    <p class="donation-amount">৳1,00,000</p>
+                </div>
+                <div class="member-card fade-in">
+                    <div class="member-image">
+                        <img src="https://ui-avatars.com/api/?name=Md.+Tamimul+Hasan+Jakir&size=200&background=d4af37&color=1a1a1a" alt="Member">
+                        <div class="member-badge gold">
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <h3>Md. Tamimul Hasan Jakir</h3>
+                    <p class="member-type" data-lang="motowalliMember">Motowalli Sodossho</p>
+                    <p class="donation-amount">৳1,00,000</p>
+                </div>
+                <div class="member-card fade-in">
+                    <div class="member-image">
+                        <img src="https://ui-avatars.com/api/?name=Md.+Olil+Mia&size=200&background=d4af37&color=1a1a1a" alt="Member">
+                        <div class="member-badge gold">
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <h3>Md. Olil Mia</h3>
+                    <p class="member-type" data-lang="motowalliMember">Motowalli Sodossho</p>
+                    <p class="donation-amount">৳1,00,000</p>
+                </div>
+                <div class="member-card fade-in">
+                    <div class="member-image">
+                        <img src="https://ui-avatars.com/api/?name=Md.+Jia+Uddin&size=200&background=d4af37&color=1a1a1a" alt="Member">
+                        <div class="member-badge gold">
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <h3>Md. Jia Uddin</h3>
+                    <p class="member-type" data-lang="motowalliMember">Motowalli Sodossho</p>
+                    <p class="donation-amount">৳1,00,000</p>
+                </div>
+                <div class="member-card fade-in">
+                    <div class="member-image">
+                        <img src="https://ui-avatars.com/api/?name=Abu+Jafor+Muhammad+Saleh&size=200&background=d4af37&color=1a1a1a" alt="Member">
+                        <div class="member-badge gold">
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <h3>Abu Jafor Muhammad Saleh</h3>
+                    <p class="member-type" data-lang="motowalliMember">Motowalli Sodossho</p>
+                    <p class="donation-amount">৳1,00,000</p>
+                </div>
+                <div class="member-card fade-in">
+                    <div class="member-image">
+                        <img src="https://ui-avatars.com/api/?name=Md+Abdullah&size=200&background=d4af37&color=1a1a1a" alt="Member">
+                        <div class="member-badge gold">
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <h3>Md Abdullah</h3>
+                    <p class="member-type" data-lang="motowalliMember">Motowalli Sodossho</p>
+                    <p class="donation-amount">৳1,00,000</p>
+                </div>
+                <div class="member-card fade-in">
+                    <div class="member-image">
+                        <img src="https://ui-avatars.com/api/?name=Md+Shahin+Alam&size=200&background=d4af37&color=1a1a1a" alt="Member">
+                        <div class="member-badge gold">
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <h3>Md. Shahin Alam</h3>
+                    <p class="member-type" data-lang="motowalliMember">Motowalli Sodossho</p>
+                    <p class="donation-amount">৳1,00,000</p>
+                </div>
+                <div class="member-card fade-in">
+                    <div class="member-image">
+                        <img src="https://ui-avatars.com/api/?name=Md+Bodiujjaman&size=200&background=d4af37&color=1a1a1a" alt="Member">
+                        <div class="member-badge gold">
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <h3>Md. Bodiujjaman</h3>
+                    <p class="member-type" data-lang="motowalliMember">Motowalli Sodossho</p>
+                    <p class="donation-amount">৳1,00,000</p>
+                </div>
+                <div class="member-card fade-in">
+                    <div class="member-image">
+                        <img src="https://ui-avatars.com/api/?name=Md+Kamrul+Hasan&size=200&background=d4af37&color=1a1a1a" alt="Member">
+                        <div class="member-badge gold">
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <h3>Md. Kamrul Hasan</h3>
+                    <p class="member-type" data-lang="motowalliMember">Motowalli Sodossho</p>
+                    <p class="donation-amount">৳1,00,000</p>
+                </div>
+                <div class="member-card fade-in">
+                    <div class="member-image">
+                        <img src="https://ui-avatars.com/api/?name=Md+Jillur+Rahman&size=200&background=d4af37&color=1a1a1a" alt="Member">
+                        <div class="member-badge gold">
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <h3>Md. Jillur Rahman</h3>
+                    <p class="member-type" data-lang="motowalliMember">Motowalli Sodossho</p>
+                    <p class="donation-amount">৳1,00,000</p>
+                </div>
+                <div class="member-card fade-in">
+                    <div class="member-image">
+                        <img src="https://ui-avatars.com/api/?name=Imam+Mehedi&size=200&background=d4af37&color=1a1a1a" alt="Member">
+                        <div class="member-badge gold">
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <h3>Imam Mehedi</h3>
+                    <p class="member-type" data-lang="motowalliMember">Motowalli Sodossho</p>
+                    <p class="donation-amount">৳1,00,000</p>
+                </div>
+                <div class="member-card fade-in">
+                    <div class="member-image">
+                        <img src="https://ui-avatars.com/api/?name=Mohsin+Iqbal&size=200&background=d4af37&color=1a1a1a" alt="Member">
+                        <div class="member-badge gold">
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <h3>Mohsin Iqbal</h3>
+                    <p class="member-type" data-lang="motowalliMember">Motowalli Sodossho</p>
+                    <p class="donation-amount">৳1,00,000</p>
+                </div>
+                <div class="member-card fade-in">
+                    <div class="member-image">
+                        <img src="https://ui-avatars.com/api/?name=Hasan+Abidur+Reza&size=200&background=d4af37&color=1a1a1a" alt="Member">
+                        <div class="member-badge gold">
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <h3>Hasan Abidur Reza</h3>
+                    <p class="member-type" data-lang="motowalliMember">Motowalli Sodossho</p>
+                    <p class="donation-amount">৳1,00,000</p>
+                </div>
+                <div class="member-card fade-in">
+                    <div class="member-image">
+                        <img src="https://ui-avatars.com/api/?name=Mustafizur+Rahman+Juyel&size=200&background=d4af37&color=1a1a1a" alt="Member">
+                        <div class="member-badge gold">
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <h3>Mustafizur Rahman Juyel</h3>
+                    <p class="member-type" data-lang="motowalliMember">Motowalli Sodossho</p>
+                    <p class="donation-amount">৳1,00,000</p>
+                </div>
+                <div class="member-card fade-in">
+                    <div class="member-image">
+                        <img src="https://ui-avatars.com/api/?name=Md.+Mijanur+Rahman&size=200&background=d4af37&color=1a1a1a" alt="Member">
+                        <div class="member-badge gold">
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <h3>Md. Mijanur Rahman</h3>
+                    <p class="member-type" data-lang="motowalliMember">Motowalli Sodossho</p>
+                    <p class="donation-amount">৳1,00,000</p>
+                </div>
+                <div class="member-card fade-in">
+                    <div class="member-image">
+                        <img src="https://ui-avatars.com/api/?name=Md.+Khairul+Bashar&size=200&background=d4af37&color=1a1a1a" alt="Member">
+                        <div class="member-badge gold">
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <h3>Md. Khairul Bashar</h3>
+                    <p class="member-type" data-lang="motowalliMember">Motowalli Sodossho</p>
+                    <p class="donation-amount">৳1,00,000</p>
+                </div>
+                <div class="member-card fade-in">
+                    <div class="member-image">
+                        <img src="https://ui-avatars.com/api/?name=Md.+Abdullah+Sorkar&size=200&background=d4af37&color=1a1a1a" alt="Member">
+                        <div class="member-badge gold">
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <h3>Md. Abdullah Sorkar</h3>
+                    <p class="member-type" data-lang="motowalliMember">Motowalli Sodossho</p>
+                    <p class="donation-amount">৳1,00,000</p>
+                </div>
+                <div class="member-card fade-in">
+                    <div class="member-image">
+                        <img src="https://ui-avatars.com/api/?name=Abdur+Rashid&size=200&background=d4af37&color=1a1a1a" alt="Member">
+                        <div class="member-badge gold">
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <h3>Abdur Rashid</h3>
+                    <p class="member-type" data-lang="motowalliMember">Motowalli Sodossho</p>
+                    <p class="donation-amount">৳1,00,000</p>
+                </div>
+                <div class="member-card fade-in">
+                    <div class="member-image">
+                        <img src="https://ui-avatars.com/api/?name=Furkan+Sordar+Kabir&size=200&background=d4af37&color=1a1a1a" alt="Member">
+                        <div class="member-badge gold">
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <h3>Md. Furkan Sordar Kabir</h3>
+                    <p class="member-type" data-lang="motowalliMember">Motowalli Sodossho</p>
+                    <p class="donation-amount">৳1,00,000</p>
+                </div>
+                <div class="member-card fade-in">
+                    <div class="member-image">
+                        <img src="https://ui-avatars.com/api/?name=Anisur+Rahman+Sobuj&size=200&background=d4af37&color=1a1a1a" alt="Member">
+                        <div class="member-badge gold">
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <h3>Md. Anisur Rahman Sobuj</h3>
+                    <p class="member-type" data-lang="motowalliMember">Motowalli Sodossho</p>
+                    <p class="donation-amount">৳1,00,000</p>
+                </div>
+                <div class="member-card fade-in">
+                    <div class="member-image">
+                        <img src="https://ui-avatars.com/api/?name=Md.+Shahjahan&size=200&background=d4af37&color=1a1a1a" alt="Member">
+                        <div class="member-badge gold">
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <h3>Md. Shahjahan</h3>
+                    <p class="member-type" data-lang="motowalliMember">Motowalli Sodossho</p>
+                    <p class="donation-amount">৳1,00,000</p>
+                </div>
+                <div class="member-card fade-in">
+                    <div class="member-image">
+                        <img src="https://ui-avatars.com/api/?name=Md.+Mujahidul+Islam&size=200&background=d4af37&color=1a1a1a" alt="Member">
+                        <div class="member-badge gold">
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <h3>Md. Mujahidul Islam</h3>
+                    <p class="member-type" data-lang="motowalliMember">Motowalli Sodossho</p>
+                    <p class="donation-amount">৳1,00,000</p>
+                </div>
+                <div class="member-card fade-in">
+                    <div class="member-image">
+                        <img src="https://ui-avatars.com/api/?name=Md.+Abur+Rahman+Raja&size=200&background=d4af37&color=1a1a1a" alt="Member">
+                        <div class="member-badge gold">
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <h3>Md. Abur Rahman Raja</h3>
+                    <p class="member-type" data-lang="motowalliMember">Motowalli Sodossho</p>
+                    <p class="donation-amount">৳1,00,000</p>
+                </div>
+                <div class="member-card fade-in">
+                    <div class="member-image">
+                        <img src="https://ui-avatars.com/api/?name=Md.+Masudur+Rahman&size=200&background=d4af37&color=1a1a1a" alt="Member">
+                        <div class="member-badge gold">
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <h3>Md. Masudur Rahman</h3>
+                    <p class="member-type" data-lang="motowalliMember">Motowalli Sodossho</p>
+                    <p class="donation-amount">৳1,00,000</p>
+                </div>
+                <div class="member-card fade-in">
+                    <div class="member-image">
+                        <img src="https://ui-avatars.com/api/?name=Md.+Bayjid&size=200&background=d4af37&color=1a1a1a" alt="Member">
+                        <div class="member-badge gold">
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <h3>Md. Bayjid</h3>
+                    <p class="member-type" data-lang="motowalliMember">Motowalli Sodossho</p>
+                    <p class="donation-amount">৳1,00,000</p>
+                </div>
+                <div class="member-card fade-in">
+                    <div class="member-image">
+                        <img src="https://ui-avatars.com/api/?name=Mst.+Rowshon+Ara+Begum&size=200&background=d4af37&color=1a1a1a" alt="Member">
+                        <div class="member-badge gold">
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <h3>Mst Rowshon Ara Begum</h3>
+                    <p class="member-type" data-lang="motowalliMember">Motowalli Sodossho</p>
+                    <p class="donation-amount">৳1,00,000</p>
+                </div>
+                <div class="member-card fade-in">
+                    <div class="member-image">
+                        <img src="https://ui-avatars.com/api/?name=Mst.+Rina+Begum&size=200&background=d4af37&color=1a1a1a" alt="Member">
+                        <div class="member-badge gold">
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <h3>Mst Rina Begum</h3>
+                    <p class="member-type" data-lang="motowalliMember">Motowalli Sodossho</p>
+                    <p class="donation-amount">৳1,00,000</p>
+                </div>
+                <div class="member-card fade-in">
+                    <div class="member-image">
+                        <img src="https://ui-avatars.com/api/?name=Tahmina+Jaman&size=200&background=d4af37&color=1a1a1a" alt="Member">
+                        <div class="member-badge gold">
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <h3>Mst. Tahmina Jaman</h3>
+                    <p class="member-type" data-lang="motowalliMember">Motowalli Sodossho</p>
+                    <p class="donation-amount">৳1,00,000</p>
+                </div>
+                <div class="member-card fade-in">
+                    <div class="member-image">
+                        <img src="https://ui-avatars.com/api/?name=Mst.+Fatema+Akter&size=200&background=d4af37&color=1a1a1a" alt="Member">
+                        <div class="member-badge gold">
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <h3>Mst. Fatema Akter</h3>
+                    <p class="member-type" data-lang="motowalliMember">Motowalli Sodossho</p>
+                    <p class="donation-amount">৳1,00,000</p>
+                </div>
+                <div class="member-card fade-in">
+                    <div class="member-image">
+                        <img src="https://ui-avatars.com/api/?name=Mst.+Runa+Layla&size=200&background=d4af37&color=1a1a1a" alt="Member">
+                        <div class="member-badge gold">
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <h3>Mst. Runa Layla</h3>
+                    <p class="member-type" data-lang="motowalliMember">Motowalli Sodossho</p>
+                    <p class="donation-amount">৳1,00,000</p>
+                </div>
+                <div class="member-card fade-in">
+                    <div class="member-image">
+                        <img src="https://ui-avatars.com/api/?name=Mst.+Mehrun+Nessa&size=200&background=d4af37&color=1a1a1a" alt="Member">
+                        <div class="member-badge gold">
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <h3>Mst. Mehrun Nessa</h3>
+                    <p class="member-type" data-lang="motowalliMember">Motowalli Sodossho</p>
+                    <p class="donation-amount">৳1,00,000</p>
+                </div>
+                <div class="member-card fade-in">
+                    <div class="member-image">
+                        <img src="https://ui-avatars.com/api/?name=Sanjida+Akter+Shirin&size=200&background=d4af37&color=1a1a1a" alt="Member">
+                        <div class="member-badge gold">
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <h3>Sanjida Akter Shirin</h3>
+                    <p class="member-type" data-lang="motowalliMember">Motowalli Sodossho</p>
+                    <p class="donation-amount">৳1,00,000</p>
+                </div>
+
             </div>
         </div>
     </section>
 
     <!-- Ajibon Sodossho Section -->
-    <section class="members-section alternate">
+    <section class="members-section alternate" id="ajibonSection">
         <div class="container">
             <h2 class="section-title" data-lang="ajibonTitle">Ajibon Sodossho</h2>
             <p class="section-subtitle" data-lang="ajibonSubtitle">Lifetime members who have donated ৳30,000</p>

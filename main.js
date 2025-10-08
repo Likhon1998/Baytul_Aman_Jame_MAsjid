@@ -224,7 +224,7 @@ const translations = {
         footerAbout: "A place of worship, learning, and community since 2016.",
         quickLinks: "Quick Links",
         contactInfo: "Contact Info",
-        address: "Dhaka, Bangladesh",
+        address: "Shapla Society, UttarKhan<br>Dhaka, Bangladesh",
         addressFull: "Baytul Aman Jame Masjid<br>Dhaka, Bangladesh",
         copyright: "All rights reserved.",
         btnContactUs: "Contact Us"
@@ -471,7 +471,47 @@ document.addEventListener('DOMContentLoaded', function() {
     initFAQ();
     initContactForm();
     initClock();
+    initCommitteeFilters();
 });
+
+// === COMMITTEE PAGE FILTER FUNCTIONALITY ===
+function initCommitteeFilters() {
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const motowalliSection = document.getElementById('motowalliSection');
+    const ajibonSection = document.getElementById('ajibonSection');
+    
+    if (!filterBtns.length || !motowalliSection || !ajibonSection) return;
+    
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            // Remove active class from all buttons
+            filterBtns.forEach(b => b.classList.remove('active'));
+            // Add active class to clicked button
+            this.classList.add('active');
+            
+            const filter = this.getAttribute('data-filter');
+            
+            if (filter === 'all') {
+                motowalliSection.classList.remove('hidden');
+                ajibonSection.classList.remove('hidden');
+            } else if (filter === 'motowalli') {
+                motowalliSection.classList.remove('hidden');
+                ajibonSection.classList.add('hidden');
+            } else if (filter === 'ajibon') {
+                motowalliSection.classList.add('hidden');
+                ajibonSection.classList.remove('hidden');
+            }
+            
+            // Smooth scroll to first visible section
+            setTimeout(() => {
+                const firstVisible = document.querySelector('.members-section:not(.hidden)');
+                if (firstVisible) {
+                    firstVisible.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            }, 100);
+        });
+    });
+}
 
 // === LANGUAGE SWITCHING ===
 function initLanguage() {
@@ -831,6 +871,7 @@ function scrollToTop() {
         behavior: 'smooth'
     });
 }
+
 
 // Show notification (utility)
 function showNotification(message, type = 'info') {
