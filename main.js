@@ -991,3 +991,327 @@ window.printPage = printPage;
 console.log('%c🕌 Baytul Aman Jame Masjid Website', 'color: #2d5f2e; font-size: 20px; font-weight: bold;');
 console.log('%cWebsite initialized successfully!', 'color: #d4af37; font-size: 14px;');
 console.log('%cMay Allah accept our efforts. Ameen.', 'color: #666; font-size: 12px; font-style: italic;');
+// ===================================
+// ISLAMIC DATE & PRAYER TIMES MODULE
+// Updated with Sunrise & Sunset Times
+// Using Aladhan API for accurate times
+// ===================================
+
+// Add new translations for sunrise and sunset
+const sunTimesTranslations = {
+    en: {
+        sunriseTime: "Sunrise (Surjodoy)",
+        sunsetTime: "Sunset (Surjasto)"
+    },
+    bn: {
+        sunriseTime: "সূর্যোদয় (Surjodoy)",
+        sunsetTime: "সূর্যাস্ত (Surjasto)"
+    }
+};
+
+// Merge with existing translations
+if (typeof translations !== 'undefined') {
+    Object.keys(sunTimesTranslations).forEach(lang => {
+        Object.assign(translations[lang], sunTimesTranslations[lang]);
+    });
+}
+
+// Configuration for Dhaka, Bangladesh
+const LOCATION_CONFIG = {
+    city: 'Dhaka',
+    country: 'Bangladesh',
+    latitude: 23.8103,
+    longitude: 90.4125,
+    timezone: 'Asia/Dhaka',
+    method: 1 // University of Islamic Sciences, Karachi
+};
+
+// Islamic month names
+const ISLAMIC_MONTHS = {
+    en: [
+        "Muharram", "Safar", "Rabiul Awwal", "Rabius Sani",
+        "Jumadal Ula", "Jumadal Saniyah", "Rajab", "Sha'ban",
+        "Ramadan", "Shawwal", "Jelkad", "Jilhaj	"
+    ],
+    bn: [
+        "মুহররম", "সফর", "রবিউল আউয়াল", "রবিউস সানি",
+        "জমাদিউল আউয়াল", "জমাদিউস সানি", "রজব", "শাবান",
+        "রমজান", "শাওয়াল", "যিলকদ", "যিলহজ্জ"
+    ]
+};
+
+// ===================================
+// FETCH ISLAMIC DATE & PRAYER TIMES
+// ===================================
+
+async function fetchIslamicData() {
+    try {
+        const today = new Date();
+        const timestamp = Math.floor(today.getTime() / 1000);
+        
+        // Fetch from Aladhan API
+        const response = await fetch(
+            `https://api.aladhan.com/v1/timings/${timestamp}?latitude=${LOCATION_CONFIG.latitude}&longitude=${LOCATION_CONFIG.longitude}&method=${LOCATION_CONFIG.method}`
+        );
+        
+        if (!response.ok) {
+            throw new Error('Failed to fetch prayer times');
+        }
+        
+        const data = await response.json();
+        
+        if (data.code === 200 && data.data) {
+            updateIslamicDate(data.data.date);
+            updatePrayerTimes(data.data.timings);
+            updateSeheriIftarSunTimes(data.data.timings, data.data.date.hijri.month.number);
+            
+            // Store data in memory for offline fallback
+            storePrayerTimesCache(data.data);
+        } else {
+            throw new Error('Invalid data received');
+        }
+    } catch (error) {
+        console.error('Error fetching Islamic data:', error);
+        handleFetchError();
+    }
+}
+
+// ===================================
+// UPDATE ISLAMIC DATE
+// ===================================
+
+function updateIslamicDate(dateData) {
+    const islamicDateFull = document.getElementById('islamicDateFull');
+    const gregorianDate = document.getElementById('gregorianDate');
+    
+    if (!islamicDateFull || !gregorianDate) return;
+    
+    const hijri = dateData.hijri;
+    const gregorian = dateData.gregorian;
+    
+    const currentLang = localStorage.getItem('language') || 'en';
+    const monthName = ISLAMIC_MONTHS[currentLang][parseInt(hijri.month.number) - 1];
+    
+    if (currentLang === 'bn') {
+        // Bengali format
+        const bengaliNumerals = convertToArabicIndic(hijri.day);
+        const bengaliYear = convertToArabicIndic(hijri.year);
+        islamicDateFull.textContent = `${bengaliNumerals} ${monthName} ${bengaliYear} হিজরি`;
+        gregorianDate.textContent = `${gregorian.day} ${gregorian.month.en} ${gregorian.year}`;
+    } else {
+        // English format
+        islamicDateFull.textContent = `${hijri.day} ${monthName} ${hijri.year} AH`;
+        gregorianDate.textContent = `${gregorian.day} ${gregorian.month.en} ${gregorian.year}`;
+    }
+    
+    // Check if it's Ramadan
+    const ramadanIndicator = document.getElementById('ramadanIndicator');
+    if (ramadanIndicator) {
+        if (parseInt(hijri.month.number) === 9) {
+            ramadanIndicator.style.display = 'inline-flex';
+        } else {
+            ramadanIndicator.style.display = 'none';
+        }
+    }
+}
+
+// ===================================
+// UPDATE PRAYER TIMES
+// ===================================
+
+function updatePrayerTimes(timings) {
+    const prayers = {
+        fajr: timings.Fajr,
+        dhuhr: timings.Dhuhr,
+        asr: timings.Asr,
+        maghrib: timings.Maghrib,
+        isha: timings.Isha
+    };
+    
+    // Update main prayer cards
+    Object.keys(prayers).forEach(prayer => {
+        const element = document.getElementById(`${prayer}Time`);
+        if (element) {
+            element.textContent = convertTo12Hour(prayers[prayer]);
+        }
+    });
+    
+    // Update footer prayer times
+    Object.keys(prayers).forEach(prayer => {
+        const footerElement = document.getElementById(`footer${prayer.charAt(0).toUpperCase() + prayer.slice(1)}`);
+        if (footerElement) {
+            footerElement.textContent = convertTo12Hour(prayers[prayer]);
+        }
+    });
+}
+
+// ===================================
+// UPDATE SEHERI, IFTAR & SUN TIMES
+// ===================================
+
+function updateSeheriIftarSunTimes(timings, islamicMonth) {
+    const seheriTimeEl = document.getElementById('seheriTime');
+    const ifterTimeEl = document.getElementById('ifterTime');
+    const sunriseTimeEl = document.getElementById('sunriseTime');
+    const sunsetTimeEl = document.getElementById('sunsetTime');
+    
+    // Seheri ends at Fajr time
+    if (seheriTimeEl && timings.Fajr) {
+        const seheriTime = convertTo12Hour(timings.Fajr);
+        seheriTimeEl.innerHTML = seheriTime;
+    }
+    
+    // Sunrise (Surjodoy)
+    if (sunriseTimeEl && timings.Sunrise) {
+        const sunriseTime = convertTo12Hour(timings.Sunrise);
+        sunriseTimeEl.innerHTML = sunriseTime;
+    }
+    
+    // Sunset (Surjasto) - typically same as Maghrib or a few minutes before
+    if (sunsetTimeEl && timings.Sunset) {
+        const sunsetTime = convertTo12Hour(timings.Sunset);
+        sunsetTimeEl.innerHTML = sunsetTime;
+    }
+    
+    // Iftar starts at Maghrib time
+    if (ifterTimeEl && timings.Maghrib) {
+        const iftarTime = convertTo12Hour(timings.Maghrib);
+        ifterTimeEl.innerHTML = iftarTime;
+    }
+    
+    // Add highlighting if it's Ramadan
+    if (parseInt(islamicMonth) === 9) {
+        if (seheriTimeEl) seheriTimeEl.classList.add('ramadan-highlight');
+        if (ifterTimeEl) ifterTimeEl.classList.add('ramadan-highlight');
+    } else {
+        if (seheriTimeEl) seheriTimeEl.classList.remove('ramadan-highlight');
+        if (ifterTimeEl) ifterTimeEl.classList.remove('ramadan-highlight');
+    }
+}
+
+// ===================================
+// UTILITY FUNCTIONS
+// ===================================
+
+// Convert 24-hour time to 12-hour format
+function convertTo12Hour(time24) {
+    if (!time24) return '--:--';
+    
+    const [hours, minutes] = time24.split(':');
+    let hour = parseInt(hours);
+    const ampm = hour >= 12 ? 'PM' : 'AM';
+    
+    hour = hour % 12;
+    hour = hour ? hour : 12; // Convert 0 to 12
+    
+    return `${hour}:${minutes} ${ampm}`;
+}
+
+// Convert to Arabic-Indic numerals (for Bengali)
+function convertToArabicIndic(num) {
+    const arabicNumerals = ['০', '১', '২', '৩', '৪', '৫', '৬', '৭', '৮', '৯'];
+    return String(num).split('').map(digit => {
+        return /\d/.test(digit) ? arabicNumerals[parseInt(digit)] : digit;
+    }).join('');
+}
+
+// Handle fetch errors
+function handleFetchError() {
+    const seheriTimeEl = document.getElementById('seheriTime');
+    const ifterTimeEl = document.getElementById('ifterTime');
+    const sunriseTimeEl = document.getElementById('sunriseTime');
+    const sunsetTimeEl = document.getElementById('sunsetTime');
+    const islamicDateFull = document.getElementById('islamicDateFull');
+    
+    const currentLang = localStorage.getItem('language') || 'en';
+    const errorMsg = currentLang === 'bn' ? 'সময় লোড করা যায়নি' : 'Unable to load';
+    
+    if (seheriTimeEl) seheriTimeEl.innerHTML = errorMsg;
+    if (ifterTimeEl) ifterTimeEl.innerHTML = errorMsg;
+    if (sunriseTimeEl) sunriseTimeEl.innerHTML = errorMsg;
+    if (sunsetTimeEl) sunsetTimeEl.innerHTML = errorMsg;
+    if (islamicDateFull) islamicDateFull.textContent = errorMsg;
+    
+    // Try to load from cache
+    loadFromCache();
+}
+
+// Store prayer times in memory (for session persistence)
+let prayerTimesCache = null;
+
+function storePrayerTimesCache(data) {
+    prayerTimesCache = {
+        date: new Date().toDateString(),
+        data: data
+    };
+}
+
+function loadFromCache() {
+    if (prayerTimesCache && prayerTimesCache.date === new Date().toDateString()) {
+        updateIslamicDate(prayerTimesCache.data.date);
+        updatePrayerTimes(prayerTimesCache.data.timings);
+        updateSeheriIftarSunTimes(prayerTimesCache.data.timings, prayerTimesCache.data.date.hijri.month.number);
+    }
+}
+
+// ===================================
+// REFRESH PRAYER TIMES
+// ===================================
+
+// Refresh prayer times at midnight
+function scheduleNextUpdate() {
+    const now = new Date();
+    const tomorrow = new Date(now);
+    tomorrow.setDate(tomorrow.getDate() + 1);
+    tomorrow.setHours(0, 0, 0, 0);
+    
+    const timeUntilMidnight = tomorrow - now;
+    
+    setTimeout(() => {
+        fetchIslamicData();
+        scheduleNextUpdate(); // Schedule next update
+    }, timeUntilMidnight);
+}
+
+// ===================================
+// INITIALIZE ON PAGE LOAD
+// ===================================
+
+// Initialize when DOM is ready
+document.addEventListener('DOMContentLoaded', function() {
+    // Fetch Islamic data immediately
+    fetchIslamicData();
+    
+    // Schedule automatic updates
+    scheduleNextUpdate();
+    
+    // Refresh when language changes
+    const langToggle = document.getElementById('langToggle');
+    if (langToggle) {
+        langToggle.addEventListener('click', function() {
+            setTimeout(() => {
+                if (prayerTimesCache) {
+                    updateIslamicDate(prayerTimesCache.data.date);
+                }
+            }, 100);
+        });
+    }
+});
+
+// Also fetch when page becomes visible (tab switching)
+document.addEventListener('visibilitychange', function() {
+    if (!document.hidden) {
+        const now = new Date();
+        if (!prayerTimesCache || prayerTimesCache.date !== now.toDateString()) {
+            fetchIslamicData();
+        }
+    }
+});
+
+// ===================================
+// EXPORT FOR INLINE USE
+// ===================================
+window.fetchIslamicData = fetchIslamicData;
+
+console.log('%c🕌 Islamic Times Module Loaded with Sunrise & Sunset', 'color: #2d5f2e; font-size: 14px; font-weight: bold;');
+console.log('%cUsing Aladhan API for accurate prayer and sun times', 'color: #d4af37; font-size: 12px;');

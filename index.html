@@ -45,13 +45,81 @@
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <h1 class="hero-title" data-lang="heroTitle">Baytul Aman Jame Masjid</h1>
-            <p class="hero-subtitle" data-lang="heroSubtitle">Established in 2016 — A House of Worship and Community</p>
+            <p class="hero-subtitle" data-lang="heroSubtitle">Established in 2016 – A House of Worship and Community</p>
             <div class="hero-buttons">
                 <a href="about.html" class="btn btn-primary" data-lang="btnLearnMore">Learn More</a>
                 <a href="donation.html" class="btn btn-secondary" data-lang="btnDonate">Donate Now</a>
             </div>
         </div>
     </section>
+
+    <!-- Islamic Date Section -->
+    <!-- Islamic Date Section -->
+<section class="islamic-date-section">
+    <div class="container">
+        <div class="islamic-date-box">
+            <i class="fas fa-calendar-alt"></i>
+            <div class="islamic-date-content">
+                <span id="islamicDateFull" class="islamic-date-main">Loading Islamic Date...</span>
+                <span id="gregorianDate" class="gregorian-date-sub"></span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Seheri & Iftar Times Section -->
+<section class="seheri-ifter-times">
+    <div class="container">
+        <h2 class="section-title">
+            <span data-lang="seheriIfterTitle">Today's Seheri & Iftar Time</span>
+            <span id="ramadanIndicator" class="ramadan-badge" style="display: none;">
+                <i class="fas fa-moon"></i> <span data-lang="ramadanMonth">Ramadan</span>
+            </span>
+        </h2>
+        <div class="seheri-ifter-grid">
+            <div class="seheri-ifter-card">
+                <i class="fas fa-sun"></i>
+                <h3 data-lang="seheriEnds">Seheri Ends (Fajr)</h3>
+                <p id="seheriTime" class="time-display">
+                    <span class="loading-spinner">
+                        <i class="fas fa-spinner fa-spin"></i>
+                    </span>
+                </p>
+            </div>
+            <div class="seheri-ifter-card sunrise-card">
+                <i class="fas fa-cloud-sun"></i>
+                <h3 data-lang="sunriseTime">Sunrise (Surjodoy)</h3>
+                <p id="sunriseTime" class="time-display">
+                    <span class="loading-spinner">
+                        <i class="fas fa-spinner fa-spin"></i>
+                    </span>
+                </p>
+            </div>
+            <div class="seheri-ifter-card sunset-card">
+                <i class="fas fa-cloud-sun"></i>
+                <h3 data-lang="sunsetTime">Sunset (Surjasto)</h3>
+                <p id="sunsetTime" class="time-display">
+                    <span class="loading-spinner">
+                        <i class="fas fa-spinner fa-spin"></i>
+                    </span>
+                </p>
+            </div>
+            <div class="seheri-ifter-card">
+                <i class="fas fa-moon"></i>
+                <h3 data-lang="ifterStarts">Iftar Starts (Maghrib)</h3>
+                <p id="ifterTime" class="time-display">
+                    <span class="loading-spinner">
+                        <i class="fas fa-spinner fa-spin"></i>
+                    </span>
+                </p>
+            </div>
+        </div>
+        <div class="time-location">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Dhaka, Bangladesh</span>
+        </div>
+    </div>
+</section>
 
     <!-- Prayer Times Section -->
     <section class="prayer-times">
@@ -65,27 +133,27 @@
                 <div class="prayer-card">
                     <i class="fas fa-sun"></i>
                     <h3 data-lang="fajr">Fajr</h3>
-                    <p class="time">5:20 AM</p>
+                    <p class="time" id="">5:20 AM</p>
                 </div>
                 <div class="prayer-card">
                     <i class="fas fa-cloud-sun"></i>
-                    <h3 data-lang="dhuhr">Jhuhr</h3>
-                    <p class="time">1:15 PM</p>
+                    <h3 data-lang="dhuhr">Dhuhr</h3>
+                    <p class="time" id="">1:15 PM</p>
                 </div>
                 <div class="prayer-card">
                     <i class="fas fa-sun"></i>
                     <h3 data-lang="asr">Asr</h3>
-                    <p class="time">4:15 PM</p>
+                    <p class="time" id="">4:15 PM</p>
                 </div>
                 <div class="prayer-card">
                     <i class="fas fa-cloud-sun"></i>
                     <h3 data-lang="maghrib">Maghrib</h3>
-                    <p class="time">6:00 PM</p>
+                    <p class="time" id="">5:44 PM</p>
                 </div>
                 <div class="prayer-card">
                     <i class="fas fa-moon"></i>
                     <h3 data-lang="isha">Isha</h3>
-                    <p class="time">7:30 PM</p>
+                    <p class="time" id="">7:30 PM</p>
                 </div>
                 <div class="prayer-card jummah">
                     <i class="fas fa-mosque"></i>
@@ -131,11 +199,6 @@
                     <h3 class="counter" data-target="200">0</h3>
                     <p data-lang="donors">Donors</p>
                 </div>
-                <!-- <div class="stat-card">
-                    <i class="fas fa-book-quran"></i>
-                    <h3 class="counter" data-target="200">0</h3>
-                    <p data-lang="students">Students</p>
-                </div> -->
             </div>
         </div>
     </section>
@@ -174,20 +237,19 @@
             <div class="footer-col">
                 <h4 data-lang="contactInfo">Contact Info</h4>
                 <ul>
-                    <li><i class="fas fa-map-marker-alt"></i> <span data-lang="address">Shapla Society,Uttarkhan, Dhaka, Bangladesh</span></li>
+                    <li><i class="fas fa-map-marker-alt"></i> <span data-lang="address">Shapla Society, Uttarkhan, Dhaka, Bangladesh</span></li>
                     <li><i class="fas fa-phone"></i> +880-1995-094669</li>
-                    <li><i class="fas fa-envelope"></i>baytulamanjamemasjid@gmail.com</li>
+                    <li><i class="fas fa-envelope"></i> baytulamanjamemasjid@gmail.com</li>
                 </ul>
             </div>
             <div class="footer-col">
                 <h4 data-lang="prayerTimesTitle">Prayer Times</h4>
                 <ul>
-                    <li><span data-lang="fajr">Fajr</span>: 5:20 AM</li>
-                    <li><span data-lang="dhuhr">Jhuhr</span>: 1:15 PM</li>
-                    <li><span data-lang="asr">Asr</span>: 4:30 PM</li>
-                    <li><span data-lang="maghrib">Maghrib</span>: 5:44 PM</li>
-                    <li><span data-lang="isha">Isha</span>: 7:30 PM</li>
-                    
+                    <li><span data-lang="fajr">Fajr</span>: <span id="">5:20 AM</span></li>
+                    <li><span data-lang="dhuhr">Dhuhr</span>: <span id="">1:15 PM</span></li>
+                    <li><span data-lang="asr">Asr</span>: <span id="">4:30 PM</span></li>
+                    <li><span data-lang="maghrib">Maghrib</span>: <span id="">5:44 PM</span></li>
+                    <li><span data-lang="isha">Isha</span>: <span id="">7:30 PM</span></li>
                 </ul>
             </div>
         </div>

@@ -1950,3 +1950,780 @@ section {
     text-decoration: underline;
     font-weight: normal;
 }
+
+/* ===================================
+   ISLAMIC DATE & SEHERI/IFTAR TIMES
+   Updated Styling
+   =================================== */
+
+/* === ISLAMIC DATE SECTION === */
+.islamic-date-section {
+    background: linear-gradient(135deg, var(--bg-light) 0%, #e8f5e9 100%);
+    padding: 30px 0;
+    margin-top: 80px;
+}
+
+.islamic-date-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background: var(--bg-white);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(45, 95, 46, 0.15);
+    padding: 25px 40px;
+    margin: 0 auto;
+    max-width: 600px;
+    border: 2px solid var(--secondary-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.islamic-date-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.05), transparent);
+    pointer-events: none;
+}
+
+.islamic-date-box i {
+    color: var(--secondary-color);
+    font-size: 2rem;
+    flex-shrink: 0;
+    animation: pulse 2s infinite;
+}
+
+.islamic-date-content {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    text-align: center;
+}
+
+.islamic-date-main {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    font-family: 'Amiri', serif;
+}
+
+.gregorian-date-sub {
+    font-size: 0.95rem;
+    color: var(--text-gray);
+    font-weight: 500;
+}
+
+/* === SEHERI & IFTAR TIMES SECTION === */
+.seheri-ifter-times {
+    background: var(--bg-white);
+    padding: 60px 0;
+}
+
+.seheri-ifter-times .section-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.ramadan-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, #2d5f2e, #1a4d1b);
+    color: var(--text-light);
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(45, 95, 46, 0.3);
+    animation: glow 2s infinite;
+}
+
+.ramadan-badge i {
+    color: var(--secondary-color);
+    font-size: 1.1rem;
+}
+
+@keyframes glow {
+    0%, 100% {
+        box-shadow: 0 4px 10px rgba(45, 95, 46, 0.3);
+    }
+    50% {
+        box-shadow: 0 4px 20px rgba(212, 175, 55, 0.6);
+    }
+}
+
+.seheri-ifter-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.seheri-ifter-card {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e8f5e9 100%);
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    padding: 35px 45px;
+    text-align: center;
+    min-width: 250px;
+    transition: var(--transition);
+    border: 3px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.seheri-ifter-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), transparent);
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.seheri-ifter-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(45, 95, 46, 0.2);
+    border-color: var(--secondary-color);
+}
+
+.seheri-ifter-card:hover::before {
+    opacity: 1;
+}
+
+.seheri-ifter-card i {
+    font-size: 3rem;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+    animation: float 3s ease-in-out infinite;
+}
+
+.seheri-ifter-card:nth-child(1) i {
+    animation-delay: 0s;
+}
+
+.seheri-ifter-card:nth-child(2) i {
+    animation-delay: 0.5s;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.seheri-ifter-card h3 {
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.seheri-ifter-card .time-display {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1px;
+}
+
+.time-display.ramadan-highlight {
+    color: var(--secondary-color);
+    text-shadow: 0 2px 10px rgba(212, 175, 55, 0.3);
+}
+
+.loading-spinner {
+    display: inline-block;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+
+.loading-spinner i {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.time-location {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 30px;
+    color: var(--text-gray);
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.time-location i {
+    color: var(--primary-color);
+    font-size: 1rem;
+}
+
+/* === PULSE ANIMATION === */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+/* === RESPONSIVE DESIGN FOR ISLAMIC TIMES === */
+@media (max-width: 768px) {
+    .islamic-date-box {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px 25px;
+        max-width: 90%;
+    }
+    
+    .islamic-date-box i {
+        font-size: 1.8rem;
+    }
+    
+    .islamic-date-main {
+        font-size: 1.2rem;
+    }
+    
+    .gregorian-date-sub {
+        font-size: 0.85rem;
+    }
+    
+    .seheri-ifter-times .section-title {
+        flex-direction: column;
+        gap: 10px;
+        font-size: 1.8rem;
+    }
+    
+    .ramadan-badge {
+        font-size: 0.9rem;
+        padding: 6px 15px;
+    }
+    
+    .seheri-ifter-grid {
+        flex-direction: column;
+        gap: 25px;
+        align-items: center;
+    }
+    
+    .seheri-ifter-card {
+        min-width: 220px;
+        max-width: 90%;
+        padding: 25px 30px;
+    }
+    
+    .seheri-ifter-card i {
+        font-size: 2.5rem;
+    }
+    
+    .seheri-ifter-card h3 {
+        font-size: 1rem;
+    }
+    
+    .seheri-ifter-card .time-display {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .islamic-date-section {
+        padding: 20px 0;
+    }
+    
+    .islamic-date-box {
+        padding: 15px 20px;
+    }
+    
+    .islamic-date-main {
+        font-size: 1rem;
+    }
+    
+    .gregorian-date-sub {
+        font-size: 0.8rem;
+    }
+    
+    .seheri-ifter-times {
+        padding: 40px 0;
+    }
+    
+    .seheri-ifter-card {
+        min-width: 200px;
+        padding: 20px 25px;
+    }
+    
+    .seheri-ifter-card .time-display {
+        font-size: 1.6rem;
+    }
+    
+    .time-location {
+        font-size: 0.85rem;
+    }
+}
+
+/* === SPECIAL EFFECTS FOR RAMADAN === */
+.seheri-ifter-times.ramadan-mode {
+    background: linear-gradient(135deg, #f8f9fa 0%, #fff9e6 100%);
+}
+
+.seheri-ifter-times.ramadan-mode .seheri-ifter-card {
+    background: linear-gradient(135deg, #fff9e6 0%, #fffbf0 100%);
+    border-color: var(--secondary-color);
+}
+
+/* === PRINT STYLES === */
+@media print {
+    .islamic-date-section,
+    .seheri-ifter-times {
+        page-break-inside: avoid;
+    }
+    
+    .seheri-ifter-card,
+    .islamic-date-box {
+        box-shadow: none;
+        border: 1px solid #000;
+    }
+    
+    .ramadan-badge {
+        background: #000;
+        color: #fff;
+    }
+}
+/* ===================================
+   ISLAMIC DATE & SEHERI/IFTAR TIMES
+   Updated with Sunrise & Sunset
+   =================================== */
+
+/* === ISLAMIC DATE SECTION === */
+.islamic-date-section {
+    background: linear-gradient(135deg, var(--bg-light) 0%, #e8f5e9 100%);
+    padding: 30px 0;
+    margin-top: 80px;
+}
+
+.islamic-date-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background: var(--bg-white);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(45, 95, 46, 0.15);
+    padding: 25px 40px;
+    margin: 0 auto;
+    max-width: 600px;
+    border: 2px solid var(--secondary-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.islamic-date-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.05), transparent);
+    pointer-events: none;
+}
+
+.islamic-date-box i {
+    color: var(--secondary-color);
+    font-size: 2rem;
+    flex-shrink: 0;
+    animation: pulse 2s infinite;
+}
+
+.islamic-date-content {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    text-align: center;
+}
+
+.islamic-date-main {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    font-family: 'Amiri', serif;
+}
+
+.gregorian-date-sub {
+    font-size: 0.95rem;
+    color: var(--text-gray);
+    font-weight: 500;
+}
+
+/* === SEHERI & IFTAR TIMES SECTION === */
+.seheri-ifter-times {
+    background: var(--bg-white);
+    padding: 60px 0;
+}
+
+.seheri-ifter-times .section-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.ramadan-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, #2d5f2e, #1a4d1b);
+    color: var(--text-light);
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(45, 95, 46, 0.3);
+    animation: glow 2s infinite;
+}
+
+.ramadan-badge i {
+    color: var(--secondary-color);
+    font-size: 1.1rem;
+}
+
+@keyframes glow {
+    0%, 100% {
+        box-shadow: 0 4px 10px rgba(45, 95, 46, 0.3);
+    }
+    50% {
+        box-shadow: 0 4px 20px rgba(212, 175, 55, 0.6);
+    }
+}
+
+.seheri-ifter-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.seheri-ifter-card {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e8f5e9 100%);
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    padding: 30px 35px;
+    text-align: center;
+    transition: var(--transition);
+    border: 3px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.seheri-ifter-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), transparent);
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.seheri-ifter-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(45, 95, 46, 0.2);
+    border-color: var(--secondary-color);
+}
+
+.seheri-ifter-card:hover::before {
+    opacity: 1;
+}
+
+/* Sunrise Card Specific Styling */
+.seheri-ifter-card.sunrise-card {
+    background: linear-gradient(135deg, #fff9e6 0%, #fffbf0 100%);
+}
+
+.seheri-ifter-card.sunrise-card i {
+    color: #ff9800;
+}
+
+.seheri-ifter-card.sunrise-card:hover {
+    border-color: #ff9800;
+}
+
+/* Sunset Card Specific Styling */
+.seheri-ifter-card.sunset-card {
+    background: linear-gradient(135deg, #ffe8e8 0%, #fff0f0 100%);
+}
+
+.seheri-ifter-card.sunset-card i {
+    color: #ff6b6b;
+}
+
+.seheri-ifter-card.sunset-card:hover {
+    border-color: #ff6b6b;
+}
+
+.seheri-ifter-card i {
+    font-size: 2.8rem;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+    animation: float 3s ease-in-out infinite;
+}
+
+.seheri-ifter-card:nth-child(1) i {
+    animation-delay: 0s;
+}
+
+.seheri-ifter-card:nth-child(2) i {
+    animation-delay: 0.3s;
+}
+
+.seheri-ifter-card:nth-child(3) i {
+    animation-delay: 0.6s;
+}
+
+.seheri-ifter-card:nth-child(4) i {
+    animation-delay: 0.9s;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.seheri-ifter-card h3 {
+    color: var(--primary-color);
+    font-size: 1rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.seheri-ifter-card .time-display {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1px;
+}
+
+.time-display.ramadan-highlight {
+    color: var(--secondary-color);
+    text-shadow: 0 2px 10px rgba(212, 175, 55, 0.3);
+}
+
+.loading-spinner {
+    display: inline-block;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+
+.loading-spinner i {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.time-location {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 30px;
+    color: var(--text-gray);
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.time-location i {
+    color: var(--primary-color);
+    font-size: 1rem;
+}
+
+/* === PULSE ANIMATION === */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+/* === RESPONSIVE DESIGN FOR ISLAMIC TIMES === */
+@media (max-width: 992px) {
+    .seheri-ifter-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    .islamic-date-box {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px 25px;
+        max-width: 90%;
+    }
+    
+    .islamic-date-box i {
+        font-size: 1.8rem;
+    }
+    
+    .islamic-date-main {
+        font-size: 1.2rem;
+    }
+    
+    .gregorian-date-sub {
+        font-size: 0.85rem;
+    }
+    
+    .seheri-ifter-times .section-title {
+        flex-direction: column;
+        gap: 10px;
+        font-size: 1.8rem;
+    }
+    
+    .ramadan-badge {
+        font-size: 0.9rem;
+        padding: 6px 15px;
+    }
+    
+    .seheri-ifter-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .seheri-ifter-card {
+        padding: 25px 20px;
+    }
+    
+    .seheri-ifter-card i {
+        font-size: 2.3rem;
+    }
+    
+    .seheri-ifter-card h3 {
+        font-size: 0.9rem;
+    }
+    
+    .seheri-ifter-card .time-display {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .islamic-date-section {
+        padding: 20px 0;
+    }
+    
+    .islamic-date-box {
+        padding: 15px 20px;
+    }
+    
+    .islamic-date-main {
+        font-size: 1rem;
+    }
+    
+    .gregorian-date-sub {
+        font-size: 0.8rem;
+    }
+    
+    .seheri-ifter-times {
+        padding: 40px 0;
+    }
+    
+    .seheri-ifter-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .seheri-ifter-card {
+        max-width: 90%;
+        margin: 0 auto;
+        padding: 25px 30px;
+    }
+    
+    .seheri-ifter-card i {
+        font-size: 2.5rem;
+    }
+    
+    .seheri-ifter-card h3 {
+        font-size: 1rem;
+    }
+    
+    .seheri-ifter-card .time-display {
+        font-size: 1.8rem;
+    }
+    
+    .time-location {
+        font-size: 0.85rem;
+    }
+}
+
+/* === SPECIAL EFFECTS FOR RAMADAN === */
+.seheri-ifter-times.ramadan-mode {
+    background: linear-gradient(135deg, #f8f9fa 0%, #fff9e6 100%);
+}
+
+.seheri-ifter-times.ramadan-mode .seheri-ifter-card {
+    background: linear-gradient(135deg, #fff9e6 0%, #fffbf0 100%);
+    border-color: var(--secondary-color);
+}
+
+/* === PRINT STYLES === */
+@media print {
+    .islamic-date-section,
+    .seheri-ifter-times {
+        page-break-inside: avoid;
+    }
+    
+    .seheri-ifter-card,
+    .islamic-date-box {
+        box-shadow: none;
+        border: 1px solid #000;
+    }
+    
+    .ramadan-badge {
+        background: #000;
+        color: #fff;
+    }
+}
