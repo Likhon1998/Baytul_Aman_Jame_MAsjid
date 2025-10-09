@@ -101,6 +101,16 @@ button {
     color: var(--primary-color);
 }
 
+.red-heart {
+    color: #e74c3c !important;
+}
+.black-heart {
+    color: #222 !important;
+}
+.blue-heart {
+    color: #007bff !important;
+}
+
 .nav-brand i {
     font-size: 1.5rem;
     color: var(--secondary-color);
@@ -1911,16 +1921,30 @@ section {
         display: none;
     }
 }
-p a {
-  background: linear-gradient(90deg, #1E7145, #DAA520);
-  color: white;
-  padding: 6px 12px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: transform 0.3s;
+.footer-bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
 }
 
-p a:hover {
-  transform: scale(1.05);
+.footer-bottom p {
+    margin: 0;
+}
+
+.powered-by {
+    font-size: 0.85em;
+    color: #fff;
+    text-align: right;
+    background: transparent;
+    margin-left: auto;
+}
+
+.powered-by a {
+    color: #fff;
+    text-decoration: underline;
+    font-weight: normal;
 }
