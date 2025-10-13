@@ -86,54 +86,62 @@
 
     <!-- Contact Form and Map -->
     <section class="contact-section">
-        <div class="container">
-            <div class="contact-content">
-                <div class="contact-form-wrapper fade-in">
-                    <h2 class="section-title" data-lang="sendMessageTitle">Send Us a Message</h2>
-                    <form class="contact-form" id="contactForm">
-                        <div class="form-group">
-                            <label for="name" data-lang="nameLabel">Your Name</label>
-                            <input type="text" id="name" name="name" required data-lang-placeholder="namePlaceholder" placeholder="Enter your name">
-                        </div>
-                        <div class="form-group">
-                            <label for="email" data-lang="emailLabel">Your Email</label>
-                            <input type="email" id="email" name="email" required data-lang-placeholder="emailPlaceholder" placeholder="Enter your email">
-                        </div>
-                        <div class="form-group">
-                            <label for="phone" data-lang="phoneLabel">Phone Number</label>
-                            <input type="tel" id="phone" name="phone" data-lang-placeholder="phonePlaceholder" placeholder="Enter your phone number">
-                        </div>
-                        <div class="form-group">
-                            <label for="subject" data-lang="subjectLabel">Subject</label>
-                            <input type="text" id="subject" name="subject" required data-lang-placeholder="subjectPlaceholder" placeholder="Enter subject">
-                        </div>
-                        <div class="form-group">
-                            <label for="message" data-lang="messageLabel">Message</label>
-                            <textarea id="message" name="message" rows="5" required data-lang-placeholder="messagePlaceholder" placeholder="Enter your message"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary" data-lang="btnSendMessage">Send Message</button>
-                    </form>
-                </div>
-                
-                <div class="map-wrapper fade-in">
-                    <h2 class="section-title" data-lang="findUsTitle">Find Us</h2>
-                    <div class="map-container">
-                        <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d233667.49930294718!2d90.25487590000001!3d23.810651!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8b087026b81%3A0x8fa563bbdd5904c2!2sDhaka%2C%20Bangladesh!5e0!3m2!1sen!2s!4v1234567890123!5m2!1sen!2s" 
-                            width="100%" 
-                            height="400" 
-                            style="border:0;" 
-                            allowfullscreen="" 
-                            loading="lazy" 
-                            referrerpolicy="no-referrer-when-downgrade">
-                        </iframe>
+    <div class="container">
+        <div class="contact-content">
+            <div class="contact-form-wrapper fade-in">
+                <h2 class="section-title" data-lang="sendMessageTitle">Send Us a Message</h2>
+                <form 
+                    class="contact-form" 
+                    id="contactForm" 
+                    action="https://formsubmit.co/n.h.likhon98@gmail.com" 
+                    method="POST"
+                >
+                    <!-- Replace your@email.com with your actual email address -->
+                    <input type="hidden" name="_captcha" value="false">
+                    <!-- Optional: Redirect to thank you page after submit -->
+                    <input type="hidden" name="_next" value="https://likhon1998.github.io/Baytul_Aman_Jame_MAsjid/thank-you.html">
+                    <div class="form-group">
+                        <label for="name" data-lang="nameLabel">Your Name</label>
+                        <input type="text" id="name" name="name" required data-lang-placeholder="namePlaceholder" placeholder="Enter your name">
                     </div>
-                    <a href="https://www.google.com/maps/place/Dhaka,+Bangladesh" target="_blank" class="btn btn-secondary" data-lang="btnDirections">Get Directions</a>
+                    <div class="form-group">
+                        <label for="email" data-lang="emailLabel">Your Email</label>
+                        <input type="email" id="email" name="email" required data-lang-placeholder="emailPlaceholder" placeholder="Enter your email">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone" data-lang="phoneLabel">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" data-lang-placeholder="phonePlaceholder" placeholder="Enter your phone number">
+                    </div>
+                    <div class="form-group">
+                        <label for="subject" data-lang="subjectLabel">Subject</label>
+                        <input type="text" id="subject" name="subject" required data-lang-placeholder="subjectPlaceholder" placeholder="Enter subject">
+                    </div>
+                    <div class="form-group">
+                        <label for="message" data-lang="messageLabel">Message</label>
+                        <textarea id="message" name="message" rows="5" required data-lang-placeholder="messagePlaceholder" placeholder="Enter your message"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" data-lang="btnSendMessage">Send Message</button>
+                </form>
+            </div>
+            
+            <div class="map-wrapper fade-in">
+                <h2 class="section-title" data-lang="findUsTitle">Find Us</h2>
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d233667.49930294718!2d90.25487590000001!3d23.810651!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8b087026b81%3A0x8fa563bbdd5904c2!2sDhaka%2C%20Bangladesh!5e0!3m2!1sen!2s!4v1234567890123!5m2!1sen!2s" 
+                        width="100%" 
+                        height="400" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
                 </div>
+                <a href="https://www.google.com/maps/place/Dhaka,+Bangladesh" target="_blank" class="btn btn-secondary" data-lang="btnDirections">Get Directions</a>
             </div>
         </div>
-    </section>
-
+    </div>
+</section>
     <!-- Key Contacts -->
     <section class="key-contacts-section">
         <div class="container">

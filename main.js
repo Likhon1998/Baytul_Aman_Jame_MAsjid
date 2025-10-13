@@ -783,38 +783,19 @@ function initFAQ() {
 // === CONTACT FORM ===
 function initContactForm() {
     const contactForm = document.getElementById('contactForm');
-    
     if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form data
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const phone = document.getElementById('phone').value;
-            const subject = document.getElementById('subject').value;
-            const message = document.getElementById('message').value;
-            
-            // Create mailto link
-            const mailtoLink = `mailto:info@baytulaman.org?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
-                `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\n\nMessage:\n${message}`
-            )}`;
-            
-            // Open email client
-            window.location.href = mailtoLink;
-            
-            // Show success message
-            alert(currentLang === 'en' 
-                ? 'Your email client will open. Please send the email to complete your message.' 
-                : 'আপনার ইমেইল ক্লায়েন্ট খুলবে। আপনার বার্তা সম্পূর্ণ করতে ইমেইল পাঠান।'
+        contactForm.addEventListener('submit', function() {
+            // Optional: Show a notification before redirecting to FormSubmit
+            showNotification(
+                currentLang === 'en'
+                    ? 'Submitting... Thank you for contacting us!'
+                    : 'পাঠানো হচ্ছে... আমাদের সাথে যোগাযোগ করার জন্য ধন্যবাদ!',
+                'success'
             );
-            
-            // Reset form
-            contactForm.reset();
+            // Do NOT prevent default; let the form submit to FormSubmit
         });
     }
 }
-
 // === REAL-TIME CLOCK ===
 function initClock() {
     const clockElement = document.getElementById('currentTime');
